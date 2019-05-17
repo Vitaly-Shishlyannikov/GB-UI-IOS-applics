@@ -16,10 +16,14 @@ class LaunchController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     
+    // кнопка запускает функцию проверки логина и пароля
     @IBAction func loginButtonPressed(_ sender: UIButton) {
+        // текст логина
         let login = userNameTextField.text
+        // текст пароля
         let password = passwordTextField.text
         
+        // проверка введенных данных
         if login == "admin" && password == "qwerty" {
             print("Успешная авторизация")
         } else {
@@ -30,15 +34,20 @@ class LaunchController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // жест нажатия
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyBoard))
+        //присваиваем его scrollView
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // подписываемся на уведомление при появление клавиатуры
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown), name: UIResponder.keyboardWillShowNotification, object: nil)
         
+        // уведомление при пропадании клавиатуры
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)),name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
@@ -49,22 +58,30 @@ class LaunchController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    // после появления клавиатуры
     @objc func keyboardWasShown(notification: Notification) {
+        
+        // получаем размер клавиатуры
         let info = notification.userInfo! as NSDictionary
         let kbSize = (info.value(forKey:
             UIResponder.keyboardFrameEndUserInfoKey) as! NSValue).cgRectValue.size
         let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: kbSize.height, right: 0.0)
         
+        // добавляем отступ внизу UIScrollView,  равный размеру клавиатуры
         self.scrollView?.contentInset = contentInsets
         scrollView?.scrollIndicatorInsets = contentInsets
     }
     
+    // после исезновения клавиатуры
     @objc func keyboardWillBeHidden(notification: Notification) {
+        
+        // устанавливаем отступ внизу UIScrollView, равный 0
         let contentInsets = UIEdgeInsets.zero
         scrollView.contentInset = contentInsets
         scrollView.scrollIndicatorInsets = contentInsets
     }
     
+    // исчезновение клавиатуры при клике по месту на экране
     @objc func hideKeyBoard() {
         self.scrollView?.endEditing(true)
     }
