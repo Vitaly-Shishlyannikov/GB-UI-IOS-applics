@@ -72,7 +72,7 @@ class LaunchController: UIViewController {
         scrollView?.scrollIndicatorInsets = contentInsets
     }
     
-    // после исезновения клавиатуры
+    // после исчезновения клавиатуры
     @objc func keyboardWillBeHidden(notification: Notification) {
         
         // устанавливаем отступ внизу UIScrollView, равный 0
@@ -85,6 +85,9 @@ class LaunchController: UIViewController {
     @objc func hideKeyBoard() {
         self.scrollView?.endEditing(true)
     }
+    
+    // метод для перехода на предыдущий экран
+    @IBAction func myUNwindAction(unwindSegue: UIStoryboardSegue){}
     
     
     
