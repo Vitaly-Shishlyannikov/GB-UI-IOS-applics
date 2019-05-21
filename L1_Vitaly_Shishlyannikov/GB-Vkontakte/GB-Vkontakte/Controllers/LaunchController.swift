@@ -18,17 +18,6 @@ class LaunchController: UIViewController {
     
     // кнопка запускает функцию проверки логина и пароля
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        // текст логина
-        let login = userNameTextField.text
-        // текст пароля
-        let password = passwordTextField.text
-        
-        // проверка введенных данных
-        if login == "admin" && password == "qwerty" {
-            print("Успешная авторизация")
-        } else {
-            print("Неверный логин или пароль")
-        }
     }
     
     override func viewDidLoad() {
@@ -89,6 +78,43 @@ class LaunchController: UIViewController {
     // метод для перехода на предыдущий экран
     @IBAction func myUNwindAction(unwindSegue: UIStoryboardSegue){}
     
+    // переопределяем метод проверки логина и пароля
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        //  проверка введеннх данных
+        let checkUserName = checkUserData()
+        
+        // вывод ошибки, если ввод неверный
+        if !checkUserName {
+            showIdentError()
+        }
+        
+        //  возврат результата
+        return checkUserName
+    }
+    
+    // функция проверки введеныых данных
+    func checkUserData() -> Bool {
+        guard let login = userNameTextField.text,
+            let password = passwordTextField.text else {return false}
+        
+        if login == "admin" && password == "12345" {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    // функция показа сообщения об ошибке
+    func showIdentError() {
+        // создаем алерт для предупреждения о неверном вводе
+        let alertWIndow = UIAlertController(title: "Warning!", message: "Invalid username or passsword", preferredStyle: .alert)
+        // кнопка для UIAlertController
+        let actionButton = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        // добавляем кнопку на UIAlertController
+        alertWIndow.addAction(actionButton)
+        // показываем UIAlertController
+        present(alertWIndow, animated: true, completion: nil)
+    }
     
     
     
