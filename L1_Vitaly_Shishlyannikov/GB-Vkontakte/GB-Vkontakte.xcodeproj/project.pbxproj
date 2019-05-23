@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		58E75EF4228EA35B00EC0B9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E75EF3228EA35B00EC0B9C /* AppDelegate.swift */; };
-		58E75EF9228EA35B00EC0B9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58E75EF7228EA35B00EC0B9C /* Main.storyboard */; };
-		58E75EFB228EA35D00EC0B9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58E75EFA228EA35D00EC0B9C /* Assets.xcassets */; };
-		58E75EFE228EA35D00EC0B9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58E75EFC228EA35D00EC0B9C /* LaunchScreen.storyboard */; };
-		58E75F0C228EC76100EC0B9C /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E75F0B228EC76100EC0B9C /* LaunchController.swift */; };
+		58E75F1A228EEBA400EC0B9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E75F19228EEBA400EC0B9C /* AppDelegate.swift */; };
+		58E75F1F228EEBA400EC0B9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58E75F1D228EEBA400EC0B9C /* Main.storyboard */; };
+		58E75F21228EEBA600EC0B9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58E75F20228EEBA600EC0B9C /* Assets.xcassets */; };
+		58E75F24228EEBA600EC0B9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58E75F22228EEBA600EC0B9C /* LaunchScreen.storyboard */; };
+		58E75F2C228EEBDD00EC0B9C /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E75F2B228EEBDD00EC0B9C /* LaunchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		58E75EF0228EA35B00EC0B9C /* GB_VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GB_VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		58E75EF3228EA35B00EC0B9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		58E75EF8228EA35B00EC0B9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		58E75EFA228EA35D00EC0B9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		58E75EFD228EA35D00EC0B9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		58E75EFF228EA35D00EC0B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		58E75F0B228EC76100EC0B9C /* LaunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchController.swift; sourceTree = "<group>"; };
+		58E75F16228EEBA400EC0B9C /* GB-Vkontakte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GB-Vkontakte.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58E75F19228EEBA400EC0B9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		58E75F1E228EEBA400EC0B9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		58E75F20228EEBA600EC0B9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		58E75F23228EEBA600EC0B9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		58E75F25228EEBA600EC0B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58E75F2B228EEBDD00EC0B9C /* LaunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		58E75EED228EA35B00EC0B9C /* Frameworks */ = {
+		58E75F13228EEBA400EC0B9C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,71 +35,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		58E75EE7228EA35B00EC0B9C = {
+		58E75F0D228EEBA400EC0B9C = {
 			isa = PBXGroup;
 			children = (
-				58E75EF2228EA35B00EC0B9C /* GB_VK */,
-				58E75EF1228EA35B00EC0B9C /* Products */,
+				58E75F18228EEBA400EC0B9C /* GB-Vkontakte */,
+				58E75F17228EEBA400EC0B9C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		58E75EF1228EA35B00EC0B9C /* Products */ = {
+		58E75F17228EEBA400EC0B9C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				58E75EF0228EA35B00EC0B9C /* GB_VK.app */,
+				58E75F16228EEBA400EC0B9C /* GB-Vkontakte.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		58E75EF2228EA35B00EC0B9C /* GB_VK */ = {
+		58E75F18228EEBA400EC0B9C /* GB-Vkontakte */ = {
 			isa = PBXGroup;
 			children = (
-				58E75F0B228EC76100EC0B9C /* LaunchController.swift */,
-				58E75EF3228EA35B00EC0B9C /* AppDelegate.swift */,
-				58E75EF7228EA35B00EC0B9C /* Main.storyboard */,
-				58E75EFA228EA35D00EC0B9C /* Assets.xcassets */,
-				58E75EFC228EA35D00EC0B9C /* LaunchScreen.storyboard */,
-				58E75EFF228EA35D00EC0B9C /* Info.plist */,
+				58E75F19228EEBA400EC0B9C /* AppDelegate.swift */,
+				58E75F2B228EEBDD00EC0B9C /* LaunchController.swift */,
+				58E75F1D228EEBA400EC0B9C /* Main.storyboard */,
+				58E75F20228EEBA600EC0B9C /* Assets.xcassets */,
+				58E75F22228EEBA600EC0B9C /* LaunchScreen.storyboard */,
+				58E75F25228EEBA600EC0B9C /* Info.plist */,
 			);
-			path = GB_VK;
+			path = "GB-Vkontakte";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		58E75EEF228EA35B00EC0B9C /* GB_VK */ = {
+		58E75F15228EEBA400EC0B9C /* GB-Vkontakte */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58E75F02228EA35D00EC0B9C /* Build configuration list for PBXNativeTarget "GB_VK" */;
+			buildConfigurationList = 58E75F28228EEBA600EC0B9C /* Build configuration list for PBXNativeTarget "GB-Vkontakte" */;
 			buildPhases = (
-				58E75EEC228EA35B00EC0B9C /* Sources */,
-				58E75EED228EA35B00EC0B9C /* Frameworks */,
-				58E75EEE228EA35B00EC0B9C /* Resources */,
+				58E75F12228EEBA400EC0B9C /* Sources */,
+				58E75F13228EEBA400EC0B9C /* Frameworks */,
+				58E75F14228EEBA400EC0B9C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = GB_VK;
-			productName = GB_VK;
-			productReference = 58E75EF0228EA35B00EC0B9C /* GB_VK.app */;
+			name = "GB-Vkontakte";
+			productName = "GB-Vkontakte";
+			productReference = 58E75F16228EEBA400EC0B9C /* GB-Vkontakte.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		58E75EE8228EA35B00EC0B9C /* Project object */ = {
+		58E75F0E228EEBA400EC0B9C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Vit;
 				TargetAttributes = {
-					58E75EEF228EA35B00EC0B9C = {
+					58E75F15228EEBA400EC0B9C = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 58E75EEB228EA35B00EC0B9C /* Build configuration list for PBXProject "GB_VK" */;
+			buildConfigurationList = 58E75F11228EEBA400EC0B9C /* Build configuration list for PBXProject "GB-Vkontakte" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -107,54 +107,54 @@
 				en,
 				Base,
 			);
-			mainGroup = 58E75EE7228EA35B00EC0B9C;
-			productRefGroup = 58E75EF1228EA35B00EC0B9C /* Products */;
+			mainGroup = 58E75F0D228EEBA400EC0B9C;
+			productRefGroup = 58E75F17228EEBA400EC0B9C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				58E75EEF228EA35B00EC0B9C /* GB_VK */,
+				58E75F15228EEBA400EC0B9C /* GB-Vkontakte */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		58E75EEE228EA35B00EC0B9C /* Resources */ = {
+		58E75F14228EEBA400EC0B9C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58E75EFE228EA35D00EC0B9C /* LaunchScreen.storyboard in Resources */,
-				58E75EFB228EA35D00EC0B9C /* Assets.xcassets in Resources */,
-				58E75EF9228EA35B00EC0B9C /* Main.storyboard in Resources */,
+				58E75F24228EEBA600EC0B9C /* LaunchScreen.storyboard in Resources */,
+				58E75F21228EEBA600EC0B9C /* Assets.xcassets in Resources */,
+				58E75F1F228EEBA400EC0B9C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		58E75EEC228EA35B00EC0B9C /* Sources */ = {
+		58E75F12228EEBA400EC0B9C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58E75F0C228EC76100EC0B9C /* LaunchController.swift in Sources */,
-				58E75EF4228EA35B00EC0B9C /* AppDelegate.swift in Sources */,
+				58E75F2C228EEBDD00EC0B9C /* LaunchController.swift in Sources */,
+				58E75F1A228EEBA400EC0B9C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		58E75EF7228EA35B00EC0B9C /* Main.storyboard */ = {
+		58E75F1D228EEBA400EC0B9C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				58E75EF8228EA35B00EC0B9C /* Base */,
+				58E75F1E228EEBA400EC0B9C /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		58E75EFC228EA35D00EC0B9C /* LaunchScreen.storyboard */ = {
+		58E75F22228EEBA600EC0B9C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				58E75EFD228EA35D00EC0B9C /* Base */,
+				58E75F23228EEBA600EC0B9C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		58E75F00228EA35D00EC0B9C /* Debug */ = {
+		58E75F26228EEBA600EC0B9C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -223,7 +223,7 @@
 			};
 			name = Debug;
 		};
-		58E75F01228EA35D00EC0B9C /* Release */ = {
+		58E75F27228EEBA600EC0B9C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -278,34 +278,34 @@
 			};
 			name = Release;
 		};
-		58E75F03228EA35D00EC0B9C /* Debug */ = {
+		58E75F29228EEBA600EC0B9C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GB_VK/Info.plist;
+				INFOPLIST_FILE = "GB-Vkontakte/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "tiV.GB-VK";
+				PRODUCT_BUNDLE_IDENTIFIER = "tiV.GB-Vkontakte";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		58E75F04228EA35D00EC0B9C /* Release */ = {
+		58E75F2A228EEBA600EC0B9C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GB_VK/Info.plist;
+				INFOPLIST_FILE = "GB-Vkontakte/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "tiV.GB-VK";
+				PRODUCT_BUNDLE_IDENTIFIER = "tiV.GB-Vkontakte";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,25 +315,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		58E75EEB228EA35B00EC0B9C /* Build configuration list for PBXProject "GB_VK" */ = {
+		58E75F11228EEBA400EC0B9C /* Build configuration list for PBXProject "GB-Vkontakte" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				58E75F00228EA35D00EC0B9C /* Debug */,
-				58E75F01228EA35D00EC0B9C /* Release */,
+				58E75F26228EEBA600EC0B9C /* Debug */,
+				58E75F27228EEBA600EC0B9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58E75F02228EA35D00EC0B9C /* Build configuration list for PBXNativeTarget "GB_VK" */ = {
+		58E75F28228EEBA600EC0B9C /* Build configuration list for PBXNativeTarget "GB-Vkontakte" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				58E75F03228EA35D00EC0B9C /* Debug */,
-				58E75F04228EA35D00EC0B9C /* Release */,
+				58E75F29228EEBA600EC0B9C /* Debug */,
+				58E75F2A228EEBA600EC0B9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 58E75EE8228EA35B00EC0B9C /* Project object */;
+	rootObject = 58E75F0E228EEBA400EC0B9C /* Project object */;
 }
