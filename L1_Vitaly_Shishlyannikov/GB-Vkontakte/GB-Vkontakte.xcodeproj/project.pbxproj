@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		581DF8F52297462C00CF8777 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581DF8F42297462C00CF8777 /* FriendsController.swift */; };
+		581DF8F72297468F00CF8777 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581DF8F62297468F00CF8777 /* FriendCell.swift */; };
+		581DF8F922974DCD00CF8777 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581DF8F822974DCD00CF8777 /* PhotoCell.swift */; };
+		581DF8FF2297517D00CF8777 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581DF8FE2297517D00CF8777 /* GroupCell.swift */; };
+		581DF9012297552100CF8777 /* RecommendedGroupsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581DF9002297552100CF8777 /* RecommendedGroupsController.swift */; };
+		581DF9032297555E00CF8777 /* RecommendedGroupViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581DF9022297555E00CF8777 /* RecommendedGroupViewCell.swift */; };
+		58BC41312293E6E600B78D21 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC41302293E6E600B78D21 /* TabBarController.swift */; };
+		58BC41352293E75200B78D21 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC41342293E75200B78D21 /* PhotosCollectionViewController.swift */; };
+		58BC41372293E77700B78D21 /* GroupsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC41362293E77700B78D21 /* GroupsController.swift */; };
 		58E75F1A228EEBA400EC0B9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E75F19228EEBA400EC0B9C /* AppDelegate.swift */; };
 		58E75F1F228EEBA400EC0B9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58E75F1D228EEBA400EC0B9C /* Main.storyboard */; };
 		58E75F21228EEBA600EC0B9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58E75F20228EEBA600EC0B9C /* Assets.xcassets */; };
@@ -15,6 +24,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		581DF8F42297462C00CF8777 /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
+		581DF8F62297468F00CF8777 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		581DF8F822974DCD00CF8777 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		581DF8FE2297517D00CF8777 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		581DF9002297552100CF8777 /* RecommendedGroupsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedGroupsController.swift; sourceTree = "<group>"; };
+		581DF9022297555E00CF8777 /* RecommendedGroupViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedGroupViewCell.swift; sourceTree = "<group>"; };
+		58BC41302293E6E600B78D21 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		58BC41342293E75200B78D21 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		58BC41362293E77700B78D21 /* GroupsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsController.swift; sourceTree = "<group>"; };
 		58E75F16228EEBA400EC0B9C /* GB-Vkontakte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GB-Vkontakte.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E75F19228EEBA400EC0B9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58E75F1E228EEBA400EC0B9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,6 +53,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		581DF8EF22973E8B00CF8777 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		581DF8FA22974DDA00CF8777 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				581DF8F62297468F00CF8777 /* FriendCell.swift */,
+				581DF8F822974DCD00CF8777 /* PhotoCell.swift */,
+				581DF8FE2297517D00CF8777 /* GroupCell.swift */,
+				581DF9022297555E00CF8777 /* RecommendedGroupViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		58BC413A2293E80A00B78D21 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				581DF8F42297462C00CF8777 /* FriendsController.swift */,
+				58BC41362293E77700B78D21 /* GroupsController.swift */,
+				581DF9002297552100CF8777 /* RecommendedGroupsController.swift */,
+				58BC41342293E75200B78D21 /* PhotosCollectionViewController.swift */,
+				58E75F2B228EEBDD00EC0B9C /* LaunchController.swift */,
+				58BC41302293E6E600B78D21 /* TabBarController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		58E75F0D228EEBA400EC0B9C = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +103,10 @@
 		58E75F18228EEBA400EC0B9C /* GB-Vkontakte */ = {
 			isa = PBXGroup;
 			children = (
+				581DF8EF22973E8B00CF8777 /* Friends */,
 				58E75F19228EEBA400EC0B9C /* AppDelegate.swift */,
-				58E75F2B228EEBDD00EC0B9C /* LaunchController.swift */,
+				581DF8FA22974DDA00CF8777 /* Cells */,
+				58BC413A2293E80A00B78D21 /* Controllers */,
 				58E75F1D228EEBA400EC0B9C /* Main.storyboard */,
 				58E75F20228EEBA600EC0B9C /* Assets.xcassets */,
 				58E75F22228EEBA600EC0B9C /* LaunchScreen.storyboard */,
@@ -135,8 +186,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				581DF8F52297462C00CF8777 /* FriendsController.swift in Sources */,
+				581DF8F922974DCD00CF8777 /* PhotoCell.swift in Sources */,
+				58BC41312293E6E600B78D21 /* TabBarController.swift in Sources */,
+				581DF9012297552100CF8777 /* RecommendedGroupsController.swift in Sources */,
+				58BC41372293E77700B78D21 /* GroupsController.swift in Sources */,
+				581DF8FF2297517D00CF8777 /* GroupCell.swift in Sources */,
+				581DF9032297555E00CF8777 /* RecommendedGroupViewCell.swift in Sources */,
 				58E75F2C228EEBDD00EC0B9C /* LaunchController.swift in Sources */,
 				58E75F1A228EEBA400EC0B9C /* AppDelegate.swift in Sources */,
+				58BC41352293E75200B78D21 /* PhotosCollectionViewController.swift in Sources */,
+				581DF8F72297468F00CF8777 /* FriendCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  RecommendedGroupsViewController.swift
+//  GroupsViewController.swift
 //  GB-Vkontakte
 //
 //  Created by Vitalik on 21.05.2019.
@@ -8,7 +8,15 @@
 
 import UIKit
 
-class RecommendedGroupsViewController: UITableViewController {
+class GroupsViewController: UITableViewController {
+    
+    var groups = [
+        "Тачки",
+        "Панк-рок и шоколадки",
+        "Крутые перцы Бобруйска",
+        "Заработаем миллиард вместе",
+        "Фан-клуб Дмитрия Анатольевича"
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,23 +32,34 @@ class RecommendedGroupsViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return groups.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath) as! GroupCell
+        let group = groups[indexPath.row]
+        
+        cell.GroupName.text = group
 
         return cell
     }
-    */
+    
+    @IBAction func addGroup(segue: UIStoryboardSegue) {
+        if segue.identifier == "addGroup" {
+            let recommendedGroupsController = segue.source as! RecommendedGroupsController
+            if let indexPath = recommendedGroupsController.tableView.indexPathForSelectedRow {
+                let group = recommendedGroupsController.recommendedGroups[indexPath.row]
+                groups.append(group)
+                tableView.reloadData()
+            }
+        }
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.
