@@ -9,6 +9,8 @@
 import UIKit
 
 class RecommendedGroupViewCell: UITableViewCell {
+    
+    static let reuseIdentifier = "RecommendedGrupCell"
 
     @IBOutlet weak var recommendedGroupName: UILabel!
     override func awakeFromNib() {

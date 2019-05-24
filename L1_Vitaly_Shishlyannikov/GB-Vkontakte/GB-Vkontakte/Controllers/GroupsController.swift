@@ -10,12 +10,12 @@ import UIKit
 
 class GroupsViewController: UITableViewController {
     
-    var groups = [
-        "Тачки",
-        "Панк-рок и шоколадки",
-        "Крутые перцы Бобруйска",
-        "Заработаем миллиард вместе",
-        "Фан-клуб Дмитрия Анатольевича"
+    var groups: [GroupModel] = [
+        GroupModel(name: "Тачки"),
+        GroupModel(name: "Панк-рок и шоколадки"),
+        GroupModel(name: "Крутые перцы Бобруйска"),
+        GroupModel(name: "Заработаем миллиард вместе"),
+        GroupModel(name: "Фан-клуб Дмитрия Анатольевича")
     ]
 
     override func viewDidLoad() {
@@ -41,24 +41,25 @@ class GroupsViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath) as! GroupCell
-        let group = groups[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: GroupCell.reuseIdentifier, for: indexPath) as? GroupCell else {
+            return UITableViewCell()}
         
-        cell.GroupName.text = group
+        cell.GroupName.text = groups[indexPath.row].name
 
         return cell
     }
     
     @IBAction func addGroup(segue: UIStoryboardSegue) {
         if segue.identifier == "addGroup" {
-            let recommendedGroupsController = segue.source as! RecommendedGroupsController
+            guard let recommendedGroupsController = segue.source as? RecommendedGroupsController else {return}
             if let indexPath = recommendedGroupsController.tableView.indexPathForSelectedRow {
                 let group = recommendedGroupsController.recommendedGroups[indexPath.row]
-                groups.append(group)
-                tableView.reloadData()
+                if !groups.contains(group) {
+                    groups.append(group)
+                    tableView.reloadData()
+                }
             }
         }
-        
     }
 
     /*
@@ -69,17 +70,15 @@ class GroupsViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            groups.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

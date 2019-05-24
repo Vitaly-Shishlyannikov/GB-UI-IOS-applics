@@ -9,6 +9,9 @@
 import UIKit
 
 class GroupCell: UITableViewCell {
+    
+    static let reuseIdentifier = "GroupCell"
+    
     @IBOutlet weak var GroupName: UILabel!
     
     override func awakeFromNib() {
