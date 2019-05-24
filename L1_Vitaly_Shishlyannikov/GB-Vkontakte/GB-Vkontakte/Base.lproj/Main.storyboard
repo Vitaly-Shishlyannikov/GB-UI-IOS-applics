@@ -316,7 +316,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="rUK-n5-Ams">
                             <connections>
-                                <segue destination="Mdh-rg-U1R" kind="show" id="YnA-mu-ifZ"/>
+                                <segue destination="Mdh-rg-U1R" kind="show" identifier="GroupSegue" id="VQN-72-QmH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -360,7 +360,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="RecommendedGroupName" destination="jVy-PU-f27" id="W7Q-hC-zsW"/>
-                                    <segue destination="iLZ-ag-RhY" kind="unwind" identifier="addGroup" unwindAction="addGroupWithSegue:" id="nxj-Bf-ELh"/>
+                                    <segue destination="iLZ-ag-RhY" kind="unwind" identifier="addGroupSegue" unwindAction="addGroupWithSegue:" id="nxj-Bf-ELh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

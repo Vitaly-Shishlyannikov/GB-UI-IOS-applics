@@ -84,11 +84,11 @@
 		58BC413A2293E80A00B78D21 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				581DF8F42297462C00CF8777 /* FriendsController.swift */,
 				58BC41362293E77700B78D21 /* GroupsController.swift */,
 				581DF9002297552100CF8777 /* RecommendedGroupsController.swift */,
-				58BC41342293E75200B78D21 /* PhotosCollectionViewController.swift */,
 				58E75F2B228EEBDD00EC0B9C /* LaunchController.swift */,
+				581DF8F42297462C00CF8777 /* FriendsController.swift */,
+				58BC41342293E75200B78D21 /* PhotosCollectionViewController.swift */,
 				58BC41302293E6E600B78D21 /* TabBarController.swift */,
 			);
 			path = Controllers;

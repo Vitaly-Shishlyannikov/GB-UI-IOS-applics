@@ -20,20 +20,9 @@ class GroupsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -50,18 +39,18 @@ class GroupsViewController: UITableViewController {
     }
     
     @IBAction func addGroup(segue: UIStoryboardSegue) {
-        if segue.identifier == "addGroup" {
-            guard let recommendedGroupsController = segue.source as? RecommendedGroupsController else {return}
-            if let indexPath = recommendedGroupsController.tableView.indexPathForSelectedRow {
+        if let recommendedGroupsController = segue.source as? RecommendedGroupsController,
+            let indexPath = recommendedGroupsController.tableView.indexPathForSelectedRow {
                 let group = recommendedGroupsController.recommendedGroups[indexPath.row]
-                if !groups.contains(group) {
-                    groups.append(group)
-                    tableView.reloadData()
+                guard !groups.contains(where: {$0.name == group.name}) else { return }
+                
+                groups.append(group)
+                let newIndexPath = IndexPath(item: groups.count - 1, section: 0)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
                 }
-            }
-        }
     }
 
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
