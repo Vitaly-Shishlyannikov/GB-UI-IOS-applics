@@ -2,17 +2,20 @@
 //  GroupCell.swift
 //  GB-Vkontakte
 //
-//  Created by Vitaly_Shishlyannikov on 24.05.2019.
+//  Created by Vitaly_Shishlyannikov on 27.05.2019.
 //  Copyright © 2019 Vit. All rights reserved.
 //
 
 import UIKit
 
 class GroupCell: UITableViewCell {
-    @IBOutlet weak var GroupName: UILabel!
+    
+    static let reuseIdentifier = "GroupCell"
+    
+    @IBOutlet weak var groupNameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 }
+

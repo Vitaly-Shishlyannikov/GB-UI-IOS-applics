@@ -50,7 +50,7 @@ class LaunchController: UIViewController {
         guard let login = userNameTextField.text,
             let password = passwordTextField.text else {return false}
         
-        if login == "admin" && password == "12345" {
+        if login == "" && password == "" {
             return true
         } else {
             passwordTextField.text = ""
