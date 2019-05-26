@@ -120,7 +120,7 @@
             </objects>
             <point key="canvasLocation" x="707" y="144"/>
         </scene>
-        <!--My Friends View Controller-->
+        <!--My friends-->
         <scene sceneID="eRJ-Wr-jIX">
             <objects>
                 <tableViewController id="2Qr-75-Auc" customClass="MyFriendsViewController" customModule="GB_Vkontakte" customModuleProvider="target" sceneMemberID="viewController">
@@ -152,6 +152,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="friendNameLabel" destination="wAx-Ne-FFP" id="zcP-OG-WoO"/>
+                                    <segue destination="xEY-bh-GoB" kind="show" identifier="PhotoSegue" id="w3b-dY-XHi"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -161,7 +162,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="e2K-IC-Ol8">
+                    <navigationItem key="navigationItem" title="My friends" id="e2K-IC-Ol8">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="SfS-hO-It1">
                             <connections>
                                 <segue destination="rQs-7e-jAM" kind="unwind" unwindAction="myUNwindActionWithUnwindSegue:" id="2vo-xd-VxV"/>
@@ -174,6 +175,54 @@
                 <exit id="rQs-7e-jAM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4342.0289855072469" y="-119.19642857142857"/>
+        </scene>
+        <!--Photo Collection View Controller-->
+        <scene sceneID="huD-Xd-cRv">
+            <objects>
+                <collectionViewController id="xEY-bh-GoB" customClass="PhotoCollectionViewController" customModule="GB_Vkontakte" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="woY-G4-y48">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wQF-9m-4gO">
+                            <size key="itemSize" width="119" height="209"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="mkT-Rz-msD" userLabel="PhotoCell" customClass="PhotoCell" customModule="GB_Vkontakte" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="119" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="119" height="209"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-37" translatesAutoresizingMaskIntoConstraints="NO" id="BRx-28-KrY">
+                                            <rect key="frame" x="0.0" y="0.0" width="119" height="209"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="BRx-28-KrY" secondAttribute="trailing" id="B1e-Vj-RzQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="BRx-28-KrY" secondAttribute="bottom" id="NXa-kN-kgn"/>
+                                    <constraint firstItem="BRx-28-KrY" firstAttribute="top" secondItem="mkT-Rz-msD" secondAttribute="top" id="WsU-6z-c0h"/>
+                                    <constraint firstItem="BRx-28-KrY" firstAttribute="leading" secondItem="mkT-Rz-msD" secondAttribute="leading" id="kTP-zU-QZs"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="photoImageView" destination="BRx-28-KrY" id="5JS-RX-8Fa"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="xEY-bh-GoB" id="HpR-Ey-wKu"/>
+                            <outlet property="delegate" destination="xEY-bh-GoB" id="lRl-ob-yng"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e3T-FM-xRC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5313.04347826087" y="-119.19642857142857"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ODj-OF-4qZ">
@@ -253,7 +302,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="z7Q-IR-Qql">
+                    <navigationItem key="navigationItem" title="My groups" id="z7Q-IR-Qql">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="m8W-br-S6l">
                             <connections>
                                 <segue destination="R1L-DX-Qf4" kind="unwind" unwindAction="myUNwindActionWithUnwindSegue:" id="Prz-Qf-193"/>
@@ -272,7 +321,7 @@
             </objects>
             <point key="canvasLocation" x="4343.4782608695659" y="673.66071428571422"/>
         </scene>
-        <!--All Groups View Controller-->
+        <!--All groups-->
         <scene sceneID="Igd-gi-7rk">
             <objects>
                 <tableViewController id="Mdh-rg-U1R" customClass="AllGroupsViewController" customModule="GB_Vkontakte" customModuleProvider="target" sceneMemberID="viewController">
@@ -304,6 +353,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="groupNameLabel" destination="Q1q-hZ-5Hm" id="0E2-QZ-DtX"/>
+                                    <segue destination="iLZ-ag-RhY" kind="unwind" identifier="addGroup" unwindAction="addGroupWithSegue:" id="iCW-DL-ttw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -313,9 +363,11 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="All groups" id="mCT-OI-fji"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnU-Xp-pzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="iLZ-ag-RhY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5314" y="675"/>
         </scene>
@@ -341,5 +393,6 @@
     </scenes>
     <resources>
         <image name="Background" width="532" height="479"/>
+        <image name="images-37" width="224" height="225"/>
     </resources>
 </document>

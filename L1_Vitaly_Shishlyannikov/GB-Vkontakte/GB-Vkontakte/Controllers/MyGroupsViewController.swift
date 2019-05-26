@@ -72,16 +72,16 @@ class MyGroupsViewController: UITableViewController {
     // MARK: - Navigation
     
     
-    //    @IBAction func addCity(segue: UIStoryboardSegue) {
-    //        if let controller = segue.source as? CitiesListViewController,
-    //            let indexPath = controller.tableView.indexPathForSelectedRow {
-    //            let city = controller.cities[indexPath.row]
-    //
-    //            guard !cities.contains(where: { $0.name == city.name }) else { return }
-    //
-    //            cities.append(city)
-    //            let newIndexPath = IndexPath(item: cities.count - 1, section: 0)
-    //            tableView.insertRows(at: [newIndexPath], with: .automatic)
-    //        }
-    //    }
+        @IBAction func addGroup(segue: UIStoryboardSegue) {
+            if let controller = segue.source as? AllGroupsViewController,
+                let indexPath = controller.tableView.indexPathForSelectedRow {
+                let group = controller.groups[indexPath.row]
+    
+                guard !groups.contains(where: { $0.name == group.name }) else { return }
+    
+                groups.append(group)
+                let newIndexPath = IndexPath(item: groups.count - 1, section: 0)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
+        }
 }

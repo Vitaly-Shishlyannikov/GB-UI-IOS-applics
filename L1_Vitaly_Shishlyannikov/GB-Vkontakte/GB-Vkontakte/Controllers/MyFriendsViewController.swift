@@ -1,5 +1,5 @@
 //
-//  MyFriendsViewController.swift
+//  AllGroupsViewController.swift
 //  GB-Vkontakte
 //
 //  Created by Vitaly_Shishlyannikov on 27.05.2019.
