@@ -120,22 +120,39 @@
             </objects>
             <point key="canvasLocation" x="707" y="144"/>
         </scene>
-        <!--Friends View Controller-->
+        <!--My Friends View Controller-->
         <scene sceneID="eRJ-Wr-jIX">
             <objects>
-                <tableViewController id="2Qr-75-Auc" customClass="FriendsViewController" customModule="GB_Vkontakte" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="2Qr-75-Auc" customClass="MyFriendsViewController" customModule="GB_Vkontakte" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zCX-Tf-dwf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" id="1lV-y2-lvd" customClass="FriendsCell" customModule="GB_Vkontakte" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" id="1lV-y2-lvd" customClass="FriendCell" customModule="GB_Vkontakte" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1lV-y2-lvd" id="fx3-DL-sZj">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAx-Ne-FFP">
+                                            <rect key="frame" x="20" y="11" width="374" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="wAx-Ne-FFP" firstAttribute="leading" secondItem="fx3-DL-sZj" secondAttribute="leadingMargin" id="V9g-h9-dJv"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="wAx-Ne-FFP" secondAttribute="trailing" id="eLt-aF-wqw"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="wAx-Ne-FFP" secondAttribute="bottom" id="h5W-W5-roa"/>
+                                        <constraint firstItem="wAx-Ne-FFP" firstAttribute="top" secondItem="fx3-DL-sZj" secondAttribute="topMargin" id="iwQ-Km-aK2"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="friendNameLabel" destination="wAx-Ne-FFP" id="zcP-OG-WoO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

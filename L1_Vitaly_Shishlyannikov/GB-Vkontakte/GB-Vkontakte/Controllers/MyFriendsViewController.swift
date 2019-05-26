@@ -1,5 +1,5 @@
 //
-//  MyGroupsViewController.swift
+//  MyFriendsViewController.swift
 //  GB-Vkontakte
 //
 //  Created by Vitaly_Shishlyannikov on 27.05.2019.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-class MyGroupsViewController: UITableViewController {
+class MyFriendsViewController: UITableViewController {
     
-    var groups: [GroupModel] = [
-        GroupModel(name:"Тачки"),
-        GroupModel(name:"Панк-рок и шоколадки"),
-        GroupModel(name:"Крутые перцы Бобруйска"),
-        GroupModel(name:"Заработаем миллиард вместе"),
-        GroupModel(name: "Фан-клуб Дмитрия Анатольевича")
+    var friends: [FriendModel] = [
+        FriendModel(name: "Андрей Иванов"),
+        FriendModel(name: "Елена Петрова"),
+        FriendModel(name: "Наталья Дябина"),
+        FriendModel(name: "Алла Пугачева"),
+        FriendModel(name: "Семен Завьялов"),
     ]
     
     override func viewDidLoad() {
@@ -26,13 +26,13 @@ class MyGroupsViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return groups.count
+        return friends.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: GroupCell.reuseIdentifier, for: indexPath) as? GroupCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendCell.reuseIdentifier, for: indexPath) as? FriendCell else { return UITableViewCell() }
         
-        cell.groupNameLabel.text = groups[indexPath.row].name
+        cell.friendNameLabel.text = friends[indexPath.row].name
         
         return cell
     }
@@ -45,14 +45,14 @@ class MyGroupsViewController: UITableViewController {
      }
      */
     
-        // Override to support editing the table view.
-        override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-            if editingStyle == .delete {
-    
-                groups.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .fade)
-            }
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            friends.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
+    }
     
     /*
      // Override to support rearranging the table view.
