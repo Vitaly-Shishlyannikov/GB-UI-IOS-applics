@@ -71,17 +71,16 @@ class MyFriendsViewController: UITableViewController {
     
     // MARK: - Navigation
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PhotoSegue",
+            let photoController = segue.destination as? PhotoCollectionViewController,
+            let indexPath = tableView.indexPathForSelectedRow {
+            
+            let photoName = friends[indexPath.row].name
+            photoController.friendNameForTitle = photoName
+            
+        }
+    }
     
-    //    @IBAction func addCity(segue: UIStoryboardSegue) {
-    //        if let controller = segue.source as? CitiesListViewController,
-    //            let indexPath = controller.tableView.indexPathForSelectedRow {
-    //            let city = controller.cities[indexPath.row]
-    //
-    //            guard !cities.contains(where: { $0.name == city.name }) else { return }
-    //
-    //            cities.append(city)
-    //            let newIndexPath = IndexPath(item: cities.count - 1, section: 0)
-    //            tableView.insertRows(at: [newIndexPath], with: .automatic)
-    //        }
-    //    }
+   
 }
