@@ -23,6 +23,9 @@
 		58E75F2C228EEBDD00EC0B9C /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E75F2B228EEBDD00EC0B9C /* LaunchController.swift */; };
 		58FAC710229C934D00DE1667 /* RoundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAC70F229C934D00DE1667 /* RoundShadowView.swift */; };
 		58FAC712229C960F00DE1667 /* RoundAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAC711229C960F00DE1667 /* RoundAvatarView.swift */; };
+		58FAC714229D533800DE1667 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAC713229D533800DE1667 /* LikeControl.swift */; };
+		58FAC716229D53DD00DE1667 /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAC715229D53DD00DE1667 /* HeartButton.swift */; };
+		58FAC718229D568C00DE1667 /* ExtensionsForClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAC717229D568C00DE1667 /* ExtensionsForClasses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		58E75F2B228EEBDD00EC0B9C /* LaunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchController.swift; sourceTree = "<group>"; };
 		58FAC70F229C934D00DE1667 /* RoundShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundShadowView.swift; sourceTree = "<group>"; };
 		58FAC711229C960F00DE1667 /* RoundAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundAvatarView.swift; sourceTree = "<group>"; };
+		58FAC713229D533800DE1667 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
+		58FAC715229D53DD00DE1667 /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
+		58FAC717229D568C00DE1667 /* ExtensionsForClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsForClasses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				58A5DDEE229B3CCC001381C4 /* MyFriendsViewController.swift */,
+				58A5DDF4229B42AC001381C4 /* PhotoCollectionViewController.swift */,
 				58A5DDE7229B3801001381C4 /* AllGroupsViewController.swift */,
 				58A5DDEC229B3B69001381C4 /* MyGroupsViewController.swift */,
-				58A5DDF4229B42AC001381C4 /* PhotoCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -105,8 +111,11 @@
 		58E75F18228EEBA400EC0B9C /* GB-Vkontakte */ = {
 			isa = PBXGroup;
 			children = (
+				58FAC717229D568C00DE1667 /* ExtensionsForClasses.swift */,
 				58E75F19228EEBA400EC0B9C /* AppDelegate.swift */,
 				58E75F2B228EEBDD00EC0B9C /* LaunchController.swift */,
+				58FAC715229D53DD00DE1667 /* HeartButton.swift */,
+				58FAC713229D533800DE1667 /* LikeControl.swift */,
 				58FAC70E229C932700DE1667 /* Custom Views */,
 				58A5DDE9229B3815001381C4 /* Models */,
 				581DF8FA22974DDA00CF8777 /* Cells */,
@@ -202,12 +211,15 @@
 			files = (
 				58FAC712229C960F00DE1667 /* RoundAvatarView.swift in Sources */,
 				58A5DDEF229B3CCC001381C4 /* MyFriendsViewController.swift in Sources */,
+				58FAC714229D533800DE1667 /* LikeControl.swift in Sources */,
 				58A5DDED229B3B69001381C4 /* MyGroupsViewController.swift in Sources */,
 				58A5DDFA229C05AB001381C4 /* GradientView.swift in Sources */,
+				58FAC716229D53DD00DE1667 /* HeartButton.swift in Sources */,
 				58A5DDE8229B3801001381C4 /* AllGroupsViewController.swift in Sources */,
 				58FAC710229C934D00DE1667 /* RoundShadowView.swift in Sources */,
 				58A5DDF1229B3DA2001381C4 /* FriendCell.swift in Sources */,
 				58E75F2C228EEBDD00EC0B9C /* LaunchController.swift in Sources */,
+				58FAC718229D568C00DE1667 /* ExtensionsForClasses.swift in Sources */,
 				58A5DDF5229B42AC001381C4 /* PhotoCollectionViewController.swift in Sources */,
 				58A5DDF3229B4251001381C4 /* PhotoCell.swift in Sources */,
 				58A5DDEB229B3840001381C4 /* Models.swift in Sources */,
