@@ -15,5 +15,8 @@ struct GroupModel {
 }
 
 struct FriendModel {
+    
     var name: String
+    var avatarPath: String
+    
 }

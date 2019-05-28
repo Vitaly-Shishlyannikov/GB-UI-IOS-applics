@@ -15,11 +15,14 @@
 		58A5DDF1229B3DA2001381C4 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A5DDF0229B3DA2001381C4 /* FriendCell.swift */; };
 		58A5DDF3229B4251001381C4 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A5DDF2229B4251001381C4 /* PhotoCell.swift */; };
 		58A5DDF5229B42AC001381C4 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A5DDF4229B42AC001381C4 /* PhotoCollectionViewController.swift */; };
+		58A5DDFA229C05AB001381C4 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A5DDF9229C05AB001381C4 /* GradientView.swift */; };
 		58E75F1A228EEBA400EC0B9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E75F19228EEBA400EC0B9C /* AppDelegate.swift */; };
 		58E75F1F228EEBA400EC0B9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58E75F1D228EEBA400EC0B9C /* Main.storyboard */; };
 		58E75F21228EEBA600EC0B9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58E75F20228EEBA600EC0B9C /* Assets.xcassets */; };
 		58E75F24228EEBA600EC0B9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58E75F22228EEBA600EC0B9C /* LaunchScreen.storyboard */; };
 		58E75F2C228EEBDD00EC0B9C /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E75F2B228EEBDD00EC0B9C /* LaunchController.swift */; };
+		58FAC710229C934D00DE1667 /* RoundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAC70F229C934D00DE1667 /* RoundShadowView.swift */; };
+		58FAC712229C960F00DE1667 /* RoundAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAC711229C960F00DE1667 /* RoundAvatarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,7 @@
 		58A5DDF0229B3DA2001381C4 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		58A5DDF2229B4251001381C4 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		58A5DDF4229B42AC001381C4 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		58A5DDF9229C05AB001381C4 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		58E75F16228EEBA400EC0B9C /* GB-Vkontakte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GB-Vkontakte.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E75F19228EEBA400EC0B9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58E75F1E228EEBA400EC0B9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,6 +42,8 @@
 		58E75F23228EEBA600EC0B9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58E75F25228EEBA600EC0B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58E75F2B228EEBDD00EC0B9C /* LaunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchController.swift; sourceTree = "<group>"; };
+		58FAC70F229C934D00DE1667 /* RoundShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundShadowView.swift; sourceTree = "<group>"; };
+		58FAC711229C960F00DE1667 /* RoundAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundAvatarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +60,8 @@
 		581DF8FA22974DDA00CF8777 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				58A5DDE5229B3788001381C4 /* GroupCell.swift */,
 				58A5DDF0229B3DA2001381C4 /* FriendCell.swift */,
+				58A5DDE5229B3788001381C4 /* GroupCell.swift */,
 				58A5DDF2229B4251001381C4 /* PhotoCell.swift */,
 			);
 			path = Cells;
@@ -72,9 +78,9 @@
 		58BC413A2293E80A00B78D21 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				58A5DDEE229B3CCC001381C4 /* MyFriendsViewController.swift */,
 				58A5DDE7229B3801001381C4 /* AllGroupsViewController.swift */,
 				58A5DDEC229B3B69001381C4 /* MyGroupsViewController.swift */,
-				58A5DDEE229B3CCC001381C4 /* MyFriendsViewController.swift */,
 				58A5DDF4229B42AC001381C4 /* PhotoCollectionViewController.swift */,
 			);
 			path = Controllers;
@@ -101,6 +107,7 @@
 			children = (
 				58E75F19228EEBA400EC0B9C /* AppDelegate.swift */,
 				58E75F2B228EEBDD00EC0B9C /* LaunchController.swift */,
+				58FAC70E229C932700DE1667 /* Custom Views */,
 				58A5DDE9229B3815001381C4 /* Models */,
 				581DF8FA22974DDA00CF8777 /* Cells */,
 				58BC413A2293E80A00B78D21 /* Controllers */,
@@ -110,6 +117,16 @@
 				58E75F25228EEBA600EC0B9C /* Info.plist */,
 			);
 			path = "GB-Vkontakte";
+			sourceTree = "<group>";
+		};
+		58FAC70E229C932700DE1667 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				58FAC70F229C934D00DE1667 /* RoundShadowView.swift */,
+				58FAC711229C960F00DE1667 /* RoundAvatarView.swift */,
+				58A5DDF9229C05AB001381C4 /* GradientView.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,9 +200,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58FAC712229C960F00DE1667 /* RoundAvatarView.swift in Sources */,
 				58A5DDEF229B3CCC001381C4 /* MyFriendsViewController.swift in Sources */,
 				58A5DDED229B3B69001381C4 /* MyGroupsViewController.swift in Sources */,
+				58A5DDFA229C05AB001381C4 /* GradientView.swift in Sources */,
 				58A5DDE8229B3801001381C4 /* AllGroupsViewController.swift in Sources */,
+				58FAC710229C934D00DE1667 /* RoundShadowView.swift in Sources */,
 				58A5DDF1229B3DA2001381C4 /* FriendCell.swift in Sources */,
 				58E75F2C228EEBDD00EC0B9C /* LaunchController.swift in Sources */,
 				58A5DDF5229B42AC001381C4 /* PhotoCollectionViewController.swift in Sources */,

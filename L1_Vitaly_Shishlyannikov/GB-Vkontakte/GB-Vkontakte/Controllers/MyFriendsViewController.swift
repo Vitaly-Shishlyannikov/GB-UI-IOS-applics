@@ -11,16 +11,15 @@ import UIKit
 class MyFriendsViewController: UITableViewController {
     
     var friends: [FriendModel] = [
-        FriendModel(name: "Андрей Иванов"),
-        FriendModel(name: "Елена Петрова"),
-        FriendModel(name: "Наталья Дябина"),
-        FriendModel(name: "Алла Пугачева"),
-        FriendModel(name: "Семен Завьялов"),
+        FriendModel(name: "Aндрей Иванов", avatarPath: "andrivanov"),
+        FriendModel(name: "Елена Петрова", avatarPath: "elenapetrova"),
+        FriendModel(name: "Наталья Дябина", avatarPath: "natadyabina"),
+        FriendModel(name: "Алла Пугачева", avatarPath: "allapugacheva"),
+        FriendModel(name: "Семен Завьялов", avatarPath: "semenzavyalov"),
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     // MARK: - Table view data source
@@ -31,8 +30,9 @@ class MyFriendsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendCell.reuseIdentifier, for: indexPath) as? FriendCell else { return UITableViewCell() }
-        
+        let avPath = friends[indexPath.row].avatarPath
         cell.friendNameLabel.text = friends[indexPath.row].name
+        cell.avatar.image = UIImage(named: avPath)
         
         return cell
     }

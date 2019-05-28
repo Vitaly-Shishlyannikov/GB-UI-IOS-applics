@@ -11,7 +11,7 @@ import UIKit
 class LaunchController: UIViewController {
     
     //MARK: - Outlets
-    
+  
     @IBOutlet weak var labelVK: UILabel!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!

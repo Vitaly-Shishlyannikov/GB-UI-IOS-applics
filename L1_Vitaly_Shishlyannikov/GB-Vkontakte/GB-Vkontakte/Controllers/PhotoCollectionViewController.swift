@@ -83,3 +83,7 @@ class PhotoCollectionViewController: UICollectionViewController {
     */
 
 }
+
+class PhotoView: UIView {
+    
+}
