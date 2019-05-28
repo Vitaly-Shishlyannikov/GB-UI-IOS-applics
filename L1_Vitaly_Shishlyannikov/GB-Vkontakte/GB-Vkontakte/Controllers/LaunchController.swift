@@ -9,14 +9,17 @@
 import UIKit
 
 class LaunchController: UIViewController {
-   
+    
+    //MARK: - Outlets
+    
     @IBOutlet weak var labelVK: UILabel!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    //MARK: - Actions
     
-    // кнопка запускает функцию проверки логина и пароля
+    // кнопка
     @IBAction func loginButtonPressed(_ sender: UIButton) {
     }
     
@@ -29,6 +32,45 @@ class LaunchController: UIViewController {
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
         
     }
+    
+    // переопределяем метод проверки логина и пароля
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        //  проверка введеннх данных
+        let checkUserName = checkUserData()
+        // вывод ошибки, если ввод неверный
+        if !checkUserName {
+            showIdentError()
+        }
+        //  возврат результата
+        return checkUserName
+    }
+    
+    // функция проверки введеныых данных
+    func checkUserData() -> Bool {
+        guard let login = userNameTextField.text,
+            let password = passwordTextField.text else {return false}
+        
+        if login == "admin" && password == "12345" {
+            return true
+        } else {
+            passwordTextField.text = ""
+            return false
+        }
+    }
+    
+    // функция показа сообщения об ошибке
+    func showIdentError() {
+        // создаем алерт для предупреждения о неверном вводе
+        let alertWIndow = UIAlertController(title: "Warning!", message: "Invalid username or passsword", preferredStyle: .alert)
+        // кнопка для UIAlertController
+        let actionButton = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        // добавляем кнопку на UIAlertController
+        alertWIndow.addAction(actionButton)
+        // показываем UIAlertController
+        present(alertWIndow, animated: true, completion: nil)
+    }
+    
+    //MARK: - LIfe cycle
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -46,6 +88,8 @@ class LaunchController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    
+    //MARK: - Keyboard
     
     // после появления клавиатуры
     @objc func keyboardWasShown(notification: Notification) {
@@ -75,46 +119,15 @@ class LaunchController: UIViewController {
         self.scrollView?.endEditing(true)
     }
     
-    // метод для перехода на предыдущий экран
-    @IBAction func myUNwindAction(unwindSegue: UIStoryboardSegue){}
+    //MARK: - Segues
     
-    // переопределяем метод проверки логина и пароля
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        //  проверка введеннх данных
-        let checkUserName = checkUserData()
-        
-        // вывод ошибки, если ввод неверный
-        if !checkUserName {
-            showIdentError()
-        }
-        
-        //  возврат результата
-        return checkUserName
+    // метод для перехода на стартовый экран с очисткой полей логина и пароля
+    @IBAction func myUNwindAction(unwindSegue: UIStoryboardSegue){
+        userNameTextField.text = ""
+        passwordTextField.text = ""
     }
     
-    // функция проверки введеныых данных
-    func checkUserData() -> Bool {
-        guard let login = userNameTextField.text,
-            let password = passwordTextField.text else {return false}
-        
-        if login == "admin" && password == "12345" {
-            return true
-        } else {
-            return false
-        }
-    }
-    
-    // функция показа сообщения об ошибке
-    func showIdentError() {
-        // создаем алерт для предупреждения о неверном вводе
-        let alertWIndow = UIAlertController(title: "Warning!", message: "Invalid username or passsword", preferredStyle: .alert)
-        // кнопка для UIAlertController
-        let actionButton = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-        // добавляем кнопку на UIAlertController
-        alertWIndow.addAction(actionButton)
-        // показываем UIAlertController
-        present(alertWIndow, animated: true, completion: nil)
-    }
+
     
     
     

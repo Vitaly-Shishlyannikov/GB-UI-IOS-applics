@@ -1,15 +1,24 @@
 //
-//  RecommendedGroupsViewController.swift
+//  FriendsViewController.swift
 //  GB-Vkontakte
 //
-//  Created by Vitalik on 21.05.2019.
+//  Created by Vitaly_Shishlyannikov on 24.05.2019.
 //  Copyright © 2019 Vit. All rights reserved.
 //
 
 import UIKit
 
-class RecommendedGroupsViewController: UITableViewController {
-
+class FriendsViewController: UITableViewController {
+    
+    var friends: [FriendModel] = [
+        FriendModel(name: "Андрей Иванов"),
+        FriendModel(name: "Елена Петрова"),
+        FriendModel(name: "Наталья Дябина"),
+        FriendModel(name: "Елена Петрова"),
+        FriendModel(name: "Семен Завьялов"),
+       
+    ]
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,23 +33,24 @@ class RecommendedGroupsViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return friends.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendsCell.reuseIdentifier, for: indexPath) as? FriendsCell else {
+            return UITableViewCell() }
+        
+        cell.friendNameLabel.text = friends[indexPath.row].name
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
