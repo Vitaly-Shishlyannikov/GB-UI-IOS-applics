@@ -231,39 +231,45 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="woY-G4-y48">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wQF-9m-4gO">
-                            <size key="itemSize" width="119" height="209"/>
+                            <size key="itemSize" width="173" height="253"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="mkT-Rz-msD" userLabel="PhotoCell" customClass="PhotoCell" customModule="GB_Vkontakte" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="119" height="209"/>
+                                <rect key="frame" x="0.0" y="0.0" width="173" height="253"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="119" height="209"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="173" height="253"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-37" translatesAutoresizingMaskIntoConstraints="NO" id="BRx-28-KrY">
-                                            <rect key="frame" x="0.0" y="0.0" width="119" height="209"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="173" height="225"/>
                                             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </imageView>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yuv-BA-5os">
-                                            <rect key="frame" x="19" y="251" width="86" height="61"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yuv-BA-5os" customClass="LikeControl" customModule="GB_Vkontakte" customModuleProvider="target">
+                                            <rect key="frame" x="103" y="223" width="70" height="30"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="Vd5-E8-G9H"/>
+                                                <constraint firstAttribute="width" constant="70" id="XZn-F1-FaU"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="BRx-28-KrY" secondAttribute="trailing" id="B1e-Vj-RzQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="BRx-28-KrY" secondAttribute="bottom" id="NXa-kN-kgn"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="BRx-28-KrY" secondAttribute="bottom" id="NXa-kN-kgn"/>
                                     <constraint firstItem="BRx-28-KrY" firstAttribute="top" secondItem="mkT-Rz-msD" secondAttribute="top" id="WsU-6z-c0h"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yuv-BA-5os" secondAttribute="trailing" id="ft1-yy-wHs"/>
                                     <constraint firstItem="BRx-28-KrY" firstAttribute="leading" secondItem="mkT-Rz-msD" secondAttribute="leading" id="kTP-zU-QZs"/>
+                                    <constraint firstAttribute="bottom" secondItem="Yuv-BA-5os" secondAttribute="bottom" id="sts-8n-egM"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="likeControl" destination="Yuv-BA-5os" id="I2n-f5-cym"/>
                                     <outlet property="photoImageView" destination="BRx-28-KrY" id="5JS-RX-8Fa"/>
                                 </connections>
                             </collectionViewCell>

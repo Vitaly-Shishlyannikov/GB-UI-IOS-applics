@@ -8,7 +8,7 @@
 
 import UIKit
 
-   class HeartButton: UIButton {
+class HeartButton: UIButton {
     
     @IBInspectable var filled: Bool = true
     @IBInspectable var strokeWidth: CGFloat = 2.0

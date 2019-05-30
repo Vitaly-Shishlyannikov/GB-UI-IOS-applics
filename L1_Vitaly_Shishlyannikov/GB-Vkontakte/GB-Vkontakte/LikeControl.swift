@@ -9,10 +9,11 @@
 import UIKit
 
 class LikeControl: UIControl {
+    
     private var stackView: UIStackView!
     private var likeButton = HeartButton()
     private let likesLabel = UILabel()
-    private var likesCount: Int = 155
+    private var likesCount: Int = 14
     private var liked: Bool = false
     
     override init(frame: CGRect) {
@@ -28,12 +29,12 @@ class LikeControl: UIControl {
     private func setupView() {
         likeButton.isUserInteractionEnabled = false
         likesLabel.text = "\(likesCount)"
-        likesLabel.textColor = UIColor.darkGray
+        likesLabel.textColor = UIColor.gray
         setupConstraints()
         
-        //MARK: to debug LikeControl position uncomment two lines below
-        //    likeButton.layer.borderWidth = 1.0
-        //    likesLabel.layer.borderWidth = 1.0
+      //  MARK: to debug LikeControl position uncomment two lines below
+//            likeButton.layer.borderWidth = 1.0
+//            likesLabel.layer.borderWidth = 1.0
         
         stackView = UIStackView(arrangedSubviews: [likeButton, likesLabel])
         self.addSubview(stackView)
@@ -71,11 +72,13 @@ class LikeControl: UIControl {
             likeButton.setNeedsDisplay()
             incrementLikesCount()
             liked = true
+            likesLabel.textColor = UIColor.red
         } else {
             likeButton.liked = false
             likeButton.setNeedsDisplay()
             decrementLikesCount()
             liked = false
+            likesLabel.textColor = UIColor.gray
         }
     }
     
@@ -105,6 +108,5 @@ class LikeControl: UIControl {
         
         self.likeButton.layer.add(animation, forKey: nil)
     }
-    
 }
 
