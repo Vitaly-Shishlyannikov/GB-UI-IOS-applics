@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class RoundAvatarView: UIImageView {
+class RoundAvatarView: UIImageView {
     
     var cornerRadius: CGFloat {
         return frame.width/2

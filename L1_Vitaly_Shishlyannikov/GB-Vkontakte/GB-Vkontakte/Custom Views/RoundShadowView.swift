@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class RoundShadowVIew: UIImageView {
+class RoundShadowVIew: UIImageView {
     
     @IBInspectable var shadowColor: UIColor = .cyan
     @IBInspectable var shadowOpacity: Float = 0.5
