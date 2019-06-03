@@ -19,23 +19,22 @@ class LaunchController: UIViewController {
     
     //MARK: - Actions
     
-    // кнопка
+    // кнопка входа
     @IBAction func loginButtonPressed(_ sender: UIButton) {
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // жест нажатия
+        // жест нажатия для скрытия клавиатуры
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyBoard))
-        //присваиваем его scrollView
+        //добавляем его scrollView
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
         
     }
     
     // переопределяем метод проверки логина и пароля
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        //  проверка введеннх данных
+        //  проверка введенных данных, если верно, то CheckUserName = true
         let checkUserName = checkUserData()
         // вывод ошибки, если ввод неверный
         if !checkUserName {
@@ -47,12 +46,14 @@ class LaunchController: UIViewController {
     
     // функция проверки введеныых данных
     func checkUserData() -> Bool {
+        // проверка наличия логина и пароля
         guard let login = userNameTextField.text,
             let password = passwordTextField.text else {return false}
-        
+        // проверка правильности логина и пароля
         if login == "" && password == "" {
             return true
         } else {
+            // если ввод неверный, поле пароля очищается
             passwordTextField.text = ""
             return false
         }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		588F829622A1181C00DA7643 /* SelectFriendIndexControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588F829522A1181C00DA7643 /* SelectFriendIndexControl.swift */; };
+		588F829A22A14EA300DA7643 /* FriendsServerEmulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588F829922A14EA300DA7643 /* FriendsServerEmulator.swift */; };
 		58A5DDE6229B3788001381C4 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A5DDE5229B3788001381C4 /* GroupCell.swift */; };
 		58A5DDE8229B3801001381C4 /* AllGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A5DDE7229B3801001381C4 /* AllGroupsViewController.swift */; };
 		58A5DDEB229B3840001381C4 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A5DDEA229B3840001381C4 /* Models.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		588F829522A1181C00DA7643 /* SelectFriendIndexControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriendIndexControl.swift; sourceTree = "<group>"; };
+		588F829922A14EA300DA7643 /* FriendsServerEmulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsServerEmulator.swift; sourceTree = "<group>"; };
 		58A5DDE5229B3788001381C4 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		58A5DDE7229B3801001381C4 /* AllGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsViewController.swift; sourceTree = "<group>"; };
 		58A5DDEA229B3840001381C4 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -87,9 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				58A5DDEE229B3CCC001381C4 /* MyFriendsViewController.swift */,
-				58A5DDF4229B42AC001381C4 /* PhotoCollectionViewController.swift */,
-				58A5DDE7229B3801001381C4 /* AllGroupsViewController.swift */,
 				58A5DDEC229B3B69001381C4 /* MyGroupsViewController.swift */,
+				58A5DDE7229B3801001381C4 /* AllGroupsViewController.swift */,
+				58A5DDF4229B42AC001381C4 /* PhotoCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -119,6 +121,7 @@
 				58FAC715229D53DD00DE1667 /* HeartButton.swift */,
 				58FAC713229D533800DE1667 /* LikeControl.swift */,
 				588F829522A1181C00DA7643 /* SelectFriendIndexControl.swift */,
+				588F829922A14EA300DA7643 /* FriendsServerEmulator.swift */,
 				58FAC70E229C932700DE1667 /* Custom Views */,
 				58A5DDE9229B3815001381C4 /* Models */,
 				581DF8FA22974DDA00CF8777 /* Cells */,
@@ -221,6 +224,7 @@
 				58FAC716229D53DD00DE1667 /* HeartButton.swift in Sources */,
 				58A5DDE8229B3801001381C4 /* AllGroupsViewController.swift in Sources */,
 				58FAC710229C934D00DE1667 /* RoundShadowView.swift in Sources */,
+				588F829A22A14EA300DA7643 /* FriendsServerEmulator.swift in Sources */,
 				58A5DDF1229B3DA2001381C4 /* FriendCell.swift in Sources */,
 				58E75F2C228EEBDD00EC0B9C /* LaunchController.swift in Sources */,
 				58FAC718229D568C00DE1667 /* ExtensionsForClasses.swift in Sources */,

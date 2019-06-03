@@ -11,11 +11,11 @@ import UIKit
 class AllGroupsViewController: UITableViewController {
     
     var groups: [GroupModel] = [
-        GroupModel(name: "Марсиане среди нас"),
-        GroupModel(name: "Любители психостимуляторов"),
-        GroupModel(name: "Теории заговоров 18 века"),
-        GroupModel(name: "Группа для тех, у кого живет домовой"),
-        GroupModel(name: "Марсиане среди нас"),
+        GroupModel(name: "Марсиане среди нас", avatarPath: "marsiane"),
+        GroupModel(name: "Любители психостимуляторов", avatarPath: "psicho"),
+        GroupModel(name: "Теории заговоров 18 века", avatarPath: "zagovor"),
+        GroupModel(name: "Группа для тех, у кого живет домовой", avatarPath: "domovoi"),
+        GroupModel(name: "Разработка IOS", avatarPath: "ios"),
     ]
     
     override func viewDidLoad() {
@@ -31,7 +31,8 @@ class AllGroupsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: GroupCell.reuseIdentifier, for: indexPath) as? GroupCell else { return UITableViewCell() }
-        
+        let avatarPath = groups[indexPath.row].avatarPath
+        cell.groupAvatar.image = UIImage(named: avatarPath)
         cell.groupNameLabel.text = groups[indexPath.row].name
         
         return cell

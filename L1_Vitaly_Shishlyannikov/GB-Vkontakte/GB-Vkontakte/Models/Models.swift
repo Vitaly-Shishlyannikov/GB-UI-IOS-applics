@@ -11,6 +11,7 @@ import UIKit
 struct GroupModel {
     
     var name: String
+    var avatarPath: String
     
 }
 

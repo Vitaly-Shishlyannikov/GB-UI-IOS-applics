@@ -13,7 +13,7 @@ class FriendCell: UITableViewCell {
     static let reuseIdentifier = "FriendCell"
     
     @IBOutlet weak var friendNameLabel: UILabel!
-    @IBOutlet weak var avatar: RoundAvatarView!
+    @IBOutlet weak var friendAvatar: RoundAvatarView!
     
     
     override func awakeFromNib() {

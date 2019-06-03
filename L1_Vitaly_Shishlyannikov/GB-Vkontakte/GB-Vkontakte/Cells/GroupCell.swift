@@ -12,6 +12,8 @@ class GroupCell: UITableViewCell {
     
     static let reuseIdentifier = "GroupCell"
     
+    
+    @IBOutlet weak var groupAvatar: RoundAvatarView!
     @IBOutlet weak var groupNameLabel: UILabel!
     
     override func awakeFromNib() {

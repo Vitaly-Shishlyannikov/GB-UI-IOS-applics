@@ -10,13 +10,9 @@
 //
 //class SelectFriendIndexControl: UIControl {
 //
-//    var friends: [FriendModel] = [
-//        FriendModel(name: "Aндрей Иванов", avatarPath: "andrivanov"),
-//        FriendModel(name: "Елена Петрова", avatarPath: "elenapetrova"),
-//        FriendModel(name: "Наталья Дябина", avatarPath: "natadyabina"),
-//        FriendModel(name: "Алла Пугачева", avatarPath: "allapugacheva"),
-//        FriendModel(name: "Семен Завьялов", avatarPath: "semenzavyalov"),
-//        ]
+//    var chars: [Character] = []
+//
+//    var friends: [FriendModel] = []
 //
 //    var charButtons: [UIButton] = []
 //    var stackView: UIStackView!
@@ -28,15 +24,49 @@
 //                firstChars.append(frChar)
 //            }
 //        }
+//
+//        print(firstChars)
 //        return firstChars
+//        self.addSubview(stackView)
 //    }
 //    override init(frame: CGRect) {
 //        super.init(frame: frame)
 //        self.setupView(friendsArray: friends)
+//        getFriends()
 //    }
 //
 //    required init?(coder aDecoder: NSCoder) {
 //        super.init(coder: aDecoder)
 //        self.setupView(friendsArray: friends)
+//        getFriends()
 //    }
+//
+//    func getFriends () {
+//        friends = FriendsServerEmulator.getFriends() ?? []
+//    }
+//
 //}
+//
+//
+//
+////
+////private func setupView() {
+////    likeButton.isUserInteractionEnabled = false
+////    likesLabel.text = "\(likesCount)"
+////    likesLabel.textColor = UIColor.gray
+////    setupConstraints()
+////
+////    //  MARK: to debug LikeControl position uncomment two lines below
+////    //            likeButton.layer.borderWidth = 1.0
+////    //            likesLabel.layer.borderWidth = 1.0
+////
+////    stackView = UIStackView(arrangedSubvi ews: [likeButton, likesLabel])
+////    self.addSubview(stackView)
+////    stackView.distribution = .fillEqually
+////    addGestureRecognizer(tapGestureRecognizer)
+////}
+////
+////override func layoutSubviews() {
+////    super.layoutSubviews()
+////    stackView.frame = bounds
+////}
