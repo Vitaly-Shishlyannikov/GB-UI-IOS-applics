@@ -30,6 +30,7 @@ class RoundAvatarView: UIImageView {
     
     func sharedInit() {
         setCornerRadius(value: cornerRadius)
+        layer.masksToBounds = true
     }
     
     func setCornerRadius(value: CGFloat) {
