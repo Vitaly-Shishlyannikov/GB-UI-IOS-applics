@@ -21,3 +21,7 @@ struct FriendModel {
     var avatarPath: String
     
 }
+
+struct PhotoModel {
+    var photoPath: String
+}

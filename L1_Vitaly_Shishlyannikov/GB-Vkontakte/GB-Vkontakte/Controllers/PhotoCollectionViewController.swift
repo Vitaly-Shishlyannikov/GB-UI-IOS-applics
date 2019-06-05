@@ -13,6 +13,13 @@ private let reuseIdentifier = "Cell"
 class PhotoCollectionViewController: UICollectionViewController {
     
     var friendNameForTitle: String = ""
+    
+    var photos: [PhotoModel] = [
+        PhotoModel(photoPath: "photo1"),
+        PhotoModel(photoPath: "photo2"),
+        PhotoModel(photoPath: "photo3"),
+        PhotoModel(photoPath: "photo4"),
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,12 +49,15 @@ class PhotoCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 4
+        return photos.count
 
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as? PhotoCell else {return UICollectionViewCell()}
+        
+        let photoPath = photos[indexPath.row].photoPath
+        cell.photoImageView.image = UIImage(named: photoPath)
 
         return cell
     }
