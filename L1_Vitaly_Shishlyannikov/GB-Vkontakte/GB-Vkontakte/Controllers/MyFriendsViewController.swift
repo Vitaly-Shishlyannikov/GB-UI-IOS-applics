@@ -8,11 +8,14 @@
 
 import UIKit
 
-class MyFriendsViewController: UITableViewController {
+class MyFriendsViewController: UITableViewController, UISearchBarDelegate {
     
     var friends: [FriendModel] = []
     var friendsIndex: [Character] = []
     var friendsIndexDictionary: [Character: [FriendModel]] = [:]
+    
+    @IBOutlet weak var friendsSearchBar: UISearchBar!
+    
     
     func getFriends () {
         friends = FriendsServerEmulator.getFriends() ?? []
