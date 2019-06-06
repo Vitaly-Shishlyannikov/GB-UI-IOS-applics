@@ -13,6 +13,7 @@ class NewsCell: UITableViewCell {
     static var reuseId = "NewsCell"
 
     @IBOutlet weak var sourceLabel: UILabel!
+    @IBOutlet weak var sourceImage: RoundAvatarView!
     @IBOutlet weak var newsText: UILabel!
     
     @IBOutlet weak var newsImage: UIImageView!

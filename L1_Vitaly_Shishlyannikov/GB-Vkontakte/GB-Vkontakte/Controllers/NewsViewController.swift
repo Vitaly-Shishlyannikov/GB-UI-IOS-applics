@@ -24,6 +24,9 @@ class NewsViewController: UITableViewController {
                            forCellReuseIdentifier: NewsCell.reuseId)
         
         tableView.dataSource = self
+        
+        tableView.estimatedRowHeight = 3000
+        tableView.rowHeight = UITableView.automaticDimension
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -50,7 +53,9 @@ class NewsViewController: UITableViewController {
         cell.newsText.text = news[indexPath.row].newsText
         cell.sourceLabel.text = news[indexPath.row].newsSource
         let picturePath = news[indexPath.row].newsPicturePath
+        let sourceImagePath = news[indexPath.row].newsSourceImage
         cell.newsImage.image = UIImage(named: picturePath)
+        cell.sourceImage.image = UIImage(named: sourceImagePath)
         
 
         // Configure the cell...

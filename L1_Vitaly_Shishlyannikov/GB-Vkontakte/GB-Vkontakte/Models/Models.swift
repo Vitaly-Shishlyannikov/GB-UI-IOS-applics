@@ -29,6 +29,7 @@ struct PhotoModel {
 struct NewsModel {
     let newsId: String
     let newsSource: String
+    let newsSourceImage: String
     let newsText: String
     let newsPicturePath: String
     let likesCount: Int
