@@ -25,3 +25,14 @@ struct FriendModel {
 struct PhotoModel {
     var photoPath: String
 }
+
+struct NewsModel {
+    let newsId: String
+    let newsSource: String
+    let newsText: String
+    let newsPicturePath: String
+    let likesCount: Int
+    let commentsCount: Int
+    let sharesCount: Int
+    let viewsCount: Int
+}

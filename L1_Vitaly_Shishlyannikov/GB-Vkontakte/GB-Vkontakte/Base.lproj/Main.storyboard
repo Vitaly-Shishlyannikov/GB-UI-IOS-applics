@@ -307,6 +307,7 @@
                     <connections>
                         <segue destination="3cv-Mj-MeO" kind="relationship" relationship="viewControllers" id="jAz-EN-4rm"/>
                         <segue destination="IaO-mI-w7l" kind="relationship" relationship="viewControllers" id="XfV-dx-dYx"/>
+                        <segue destination="GpR-nz-9Fp" kind="relationship" relationship="viewControllers" id="LI3-hp-9Tl"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDl-zs-wFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -434,6 +435,42 @@
                 <exit id="R1L-DX-Qf4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4343.4782608695659" y="673.66071428571422"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="kg3-SC-rJa">
+            <objects>
+                <tableViewController id="q9a-Zu-aKR" customClass="NewsViewController" customModule="GB_Vkontakte" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rf4-vr-9k7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="q9a-Zu-aKR" id="2Jk-4B-JMA"/>
+                            <outlet property="delegate" destination="q9a-Zu-aKR" id="E0R-EU-rSE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="News" id="e3I-ws-Om8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="loS-n5-MtV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4295" y="1615"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="CHf-dV-ndZ">
+            <objects>
+                <navigationController id="GpR-nz-9Fp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News" id="dGo-8c-emr"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QT4-b7-gme">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="q9a-Zu-aKR" kind="relationship" relationship="rootViewController" id="m09-SE-Q85"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbH-sh-N8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3374" y="1615"/>
         </scene>
         <!--All groups-->
         <scene sceneID="Igd-gi-7rk">
