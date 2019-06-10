@@ -16,6 +16,7 @@ class LaunchController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var loginButton: UIButton!
     
     //MARK: - Actions
     
@@ -23,13 +24,16 @@ class LaunchController: UIViewController {
     @IBAction func loginButtonPressed(_ sender: UIButton) {
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // жест нажатия для скрытия клавиатуры
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyBoard))
         //добавляем его scrollView
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
-        
+        self.loginButton.layer.cornerRadius = 5
+        animateTitleVK()
+        animateEnterButton()
     }
     
     // переопределяем метод проверки логина и пароля
@@ -128,7 +132,35 @@ class LaunchController: UIViewController {
         passwordTextField.text = ""
     }
     
-
+    
+    // анимация надписи ВК, вылетает сверху с пружинистостью
+    func animateTitleVK () {
+        self.labelVK.transform = CGAffineTransform(translationX: 0,
+                                                   y: -self.view.bounds.height / 2)
+        UIView.animate(withDuration: 1,
+                       delay: 1,
+                       usingSpringWithDamping: 0.5,
+                       initialSpringVelocity: 0.6,
+                       options: .curveEaseOut,
+                       animations: {
+                        self.labelVK.transform = .identity
+                        },
+                       completion: nil)
+    }
+    
+    // анимация кнопки Войти, появляется с увеличением
+    func animateEnterButton () {
+        let animation = CASpringAnimation(keyPath: "transform.scale")
+        animation.fromValue = 0
+        animation.toValue = 1
+        animation.stiffness = 100
+        animation.mass = 1
+        animation.duration = 2
+        animation.beginTime = CACurrentMediaTime() + 1
+        animation.fillMode = CAMediaTimingFillMode.backwards
+        
+        self.loginButton.layer.add(animation, forKey: nil)
+    }
     
     
     
