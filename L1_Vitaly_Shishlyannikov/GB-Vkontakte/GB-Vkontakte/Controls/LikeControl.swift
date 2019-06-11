@@ -97,13 +97,12 @@ class LikeControl: UIControl {
     
     
     func animateLikeButton() {
-        let animation = CASpringAnimation(keyPath: "transform.scale")
-        animation.fromValue = 0
-        animation.toValue = 1
-        animation.stiffness = 200
+        let animation = CASpringAnimation(keyPath: "transform.rotation")
+        animation.fromValue = Double.pi / 2
+        animation.toValue = Double.pi * 2
+        animation.stiffness = 100
         animation.mass = 1
         animation.duration = 1
-        animation.beginTime = CACurrentMediaTime()
         animation.fillMode = CAMediaTimingFillMode.backwards
         
         self.likeButton.layer.add(animation, forKey: nil)

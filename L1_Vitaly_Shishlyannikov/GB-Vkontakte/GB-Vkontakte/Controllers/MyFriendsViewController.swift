@@ -17,9 +17,7 @@ class MyFriendsViewController: UITableViewController, UISearchResultsUpdating {
     
     let searchController = UISearchController(searchResultsController: nil)
     
-    
     // MARK: SearchBar
-    
     
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!)
@@ -63,6 +61,7 @@ class MyFriendsViewController: UITableViewController, UISearchResultsUpdating {
         getFriendsIndexArray()
         getFriendsIndexDictionary()
         self.tableView.backgroundColor = UIColor.blue
+        self.tableView.rowHeight = 70
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -107,7 +106,6 @@ class MyFriendsViewController: UITableViewController, UISearchResultsUpdating {
         cell.friendNameLabel.text = friendName
         cell.friendAvatar.image = UIImage(named: avatarPath!)
         cell.contentView.backgroundColor = UIColor(red: 0.9, green: 1.0, blue: 1.0, alpha: 1.0)
-        tableView.separatorStyle = .none
         
         return cell
     }
@@ -132,7 +130,7 @@ class MyFriendsViewController: UITableViewController, UISearchResultsUpdating {
         }
     }
     
-    // Override to support editing the table view.
+    // функция удаления друзей
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
@@ -147,10 +145,9 @@ class MyFriendsViewController: UITableViewController, UISearchResultsUpdating {
         if segue.identifier == "PhotoSegue",
             let photoController = segue.destination as? PhotoCollectionViewController,
             let indexPath = tableView.indexPathForSelectedRow {
-            
+
                 let photoName = friends[indexPath.row].name
                 photoController.friendNameForTitle = photoName
-            
-        }
+            }
     }
 }

@@ -18,7 +18,8 @@ class FriendCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        addGestureRecognizer(tapGestureRecognizer)
+        friendAvatar.addGestureRecognizer(tapGestureRecognizer)
+        friendAvatar.isUserInteractionEnabled = true
     }
     
     lazy var tapGestureRecognizer: UITapGestureRecognizer = {
@@ -29,7 +30,7 @@ class FriendCell: UITableViewCell {
         return recognizer
     }()
     
-    @objc func onTap(_ sender: RoundAvatarView) {
+    @objc func onTap(_ sender: UITapGestureRecognizer) {
         animateAvatar()
     }
     

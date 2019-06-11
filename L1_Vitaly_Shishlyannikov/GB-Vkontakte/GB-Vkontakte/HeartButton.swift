@@ -24,7 +24,7 @@ class HeartButton: UIButton {
             self.strokeColor.setStroke()
             self.filled = false
         } else {
-            strokeColor = UIColor.black
+            strokeColor = UIColor.red
             self.tintColor = UIColor.red
             self.strokeColor.setStroke()
             self.tintColor.setFill()

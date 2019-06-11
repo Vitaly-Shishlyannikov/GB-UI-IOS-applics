@@ -18,7 +18,8 @@ class GroupCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        addGestureRecognizer(tapGestureRecognizer)
+        groupAvatar.addGestureRecognizer(tapGestureRecognizer)
+        groupAvatar.isUserInteractionEnabled = true
     }
     
     lazy var tapGestureRecognizer: UITapGestureRecognizer = {
@@ -29,7 +30,7 @@ class GroupCell: UITableViewCell {
         return recognizer
     }()
     
-    @objc func onTap(_ sender: RoundAvatarView) {
+    @objc func onTap(_ sender: UITapGestureRecognizer) {
         animateAvatar()
     }
     
