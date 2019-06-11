@@ -21,32 +21,24 @@ class RoundShadowVIew: UIImageView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        sharedInit()
+        setShadow(radius: cornerRadius)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        sharedInit()
+        setShadow(radius: cornerRadius)
     }
     
     override func prepareForInterfaceBuilder() {
-        sharedInit()
+        setShadow(radius: cornerRadius)
     }
     
-    func sharedInit() {
-        setCornerRadius(value: cornerRadius)
-        setShadow()
-    }
-    
-    func setCornerRadius(value: CGFloat) {
-        layer.cornerRadius = value
-    }
-    
-    func setShadow() {
+    func setShadow(radius: CGFloat) {
         layer.shadowColor = shadowColor.cgColor
         layer.shadowOpacity = shadowOpacity
         layer.shadowRadius = shadowRadius
         layer.shadowOffset = shadowOffset
         layer.masksToBounds = false
+        layer.cornerRadius = radius
     }
 }

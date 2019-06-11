@@ -16,25 +16,21 @@ class RoundAvatarView: UIImageView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        sharedInit()
+        setCornerRadius(value: cornerRadius)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        sharedInit()
+        setCornerRadius(value: cornerRadius)
     }
     
     override func prepareForInterfaceBuilder() {
-        sharedInit()
-    }
-    
-    func sharedInit() {
         setCornerRadius(value: cornerRadius)
-        layer.masksToBounds = true
     }
     
     func setCornerRadius(value: CGFloat) {
         layer.cornerRadius = value
+        layer.masksToBounds = true
     }
 }
 
