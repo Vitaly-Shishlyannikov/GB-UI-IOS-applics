@@ -18,22 +18,13 @@ class LaunchController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var loginButton: UIButton!
     
+    // время для таймера
+    var timerSeconds = 3
+    
     //MARK: - Actions
     
     // кнопка входа
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // жест нажатия для скрытия клавиатуры
-        let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyBoard))
-        //добавляем его scrollView
-        scrollView?.addGestureRecognizer(hideKeyboardGesture)
-        self.loginButton.layer.cornerRadius = 5
-        animateTitleVK()
-        animateEnterButton()
     }
     
     // переопределяем метод проверки логина и пароля
@@ -77,6 +68,17 @@ class LaunchController: UIViewController {
     
     //MARK: - LIfe cycle
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // жест нажатия для скрытия клавиатуры
+        let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyBoard))
+        //добавляем его scrollView
+        scrollView?.addGestureRecognizer(hideKeyboardGesture)
+        self.loginButton.layer.cornerRadius = 5
+        animateTitleVK()
+        animateEnterButton()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -85,6 +87,20 @@ class LaunchController: UIViewController {
         
         // уведомление при пропадании клавиатуры
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)),name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        // показываем индикатор загрузки ThreePointsIndicator
+        let progressStatusIndicator = ThreePointsIndicator(frame: CGRect(x: 0, y: 100, width: view.bounds.width, height: view.bounds.height))
+        progressStatusIndicator.tag = 100
+        view.addSubview(progressStatusIndicator)
+        
+        // таймер для удаления индикатора
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            self.timerSeconds -= 1
+            if self.timerSeconds == 0 {
+                timer.invalidate()
+                progressStatusIndicator.removeFromSuperview()
+            }
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -132,6 +148,7 @@ class LaunchController: UIViewController {
         passwordTextField.text = ""
     }
     
+    //MARK: - Animations
     
     // анимация надписи ВК, вылетает сверху с пружинистостью
     func animateTitleVK () {
@@ -161,18 +178,4 @@ class LaunchController: UIViewController {
         
         self.loginButton.layer.add(animation, forKey: nil)
     }
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
