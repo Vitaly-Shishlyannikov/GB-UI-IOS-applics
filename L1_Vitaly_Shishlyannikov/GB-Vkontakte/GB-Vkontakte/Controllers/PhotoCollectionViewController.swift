@@ -14,25 +14,17 @@ class PhotoCollectionViewController: UICollectionViewController {
     
     var friendNameForTitle: String = ""
     
-    var photos: [PhotoModel] = [
-        PhotoModel(photoPath: "photo1"),
-        PhotoModel(photoPath: "photo2"),
-        PhotoModel(photoPath: "photo3"),
-        PhotoModel(photoPath: "photo4"),
-    ]
+    var photos: [PhotoModel] = []
+    
+    func getPhotos () {
+        photos = PhotosServerEmulator.getPhotos() ?? []
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        getPhotos()
         
         title = friendNameForTitle
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
     }
 
     /*
@@ -60,6 +52,15 @@ class PhotoCollectionViewController: UICollectionViewController {
         cell.photoImageView.image = UIImage(named: photoPath)
 
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "fullScreenSegue",
+            let fullScreenPhoto = segue.destination as? FullScreenPhotoController,
+            let indexPaths = collectionView.indexPathsForSelectedItems,
+            let indexPath = indexPaths.first {
+                fullScreenPhoto.indexPathSelected = indexPath
+            }
     }
 
     // MARK: UICollectionViewDelegate

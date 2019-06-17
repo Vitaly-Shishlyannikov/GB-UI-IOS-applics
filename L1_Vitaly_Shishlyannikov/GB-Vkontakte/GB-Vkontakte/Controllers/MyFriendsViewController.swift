@@ -60,8 +60,8 @@ class MyFriendsViewController: UITableViewController, UISearchResultsUpdating {
         getFriends()
         getFriendsIndexArray()
         getFriendsIndexDictionary()
-        self.tableView.backgroundColor = UIColor.blue
         self.tableView.rowHeight = 70
+        //self.tableView.backgroundColor = UIColor.blue
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -105,7 +105,7 @@ class MyFriendsViewController: UITableViewController, UISearchResultsUpdating {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendCell.reuseIdentifier, for: indexPath) as? FriendCell else { return UITableViewCell() }
         cell.friendNameLabel.text = friendName
         cell.friendAvatar.image = UIImage(named: avatarPath!)
-        cell.contentView.backgroundColor = UIColor(red: 0.9, green: 1.0, blue: 1.0, alpha: 1.0)
+        //cell.contentView.backgroundColor = UIColor.white
         
         return cell
     }

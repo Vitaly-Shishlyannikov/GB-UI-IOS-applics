@@ -104,7 +104,7 @@
                                 <color key="value" red="0.53837382101007369" green="0.95787982989865617" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                <color key="value" red="0.0" green="0.42578033712688101" blue="0.88273318527918776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.015707302838563919" green="0.42733457684516907" blue="0.88313561677932739" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
                                 <real key="value" value="0.0"/>
@@ -135,6 +135,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendCell" id="1lV-y2-lvd" customClass="FriendCell" customModule="GB_Vkontakte" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="60"/>
@@ -157,7 +158,7 @@
                                                     <gestureRecognizers/>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.83921568627450982" green="0.98039215686274506" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="44" id="9ke-JI-Vvg"/>
                                                 <constraint firstAttribute="height" constant="44" id="FxY-MF-jke"/>
@@ -182,7 +183,6 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.83921568627450982" green="0.98039215686274506" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="ThC-fO-Yil" firstAttribute="centerY" secondItem="fx3-DL-sZj" secondAttribute="centerY" id="A5q-h9-PNQ"/>
                                         <constraint firstItem="11f-FT-y2S" firstAttribute="leading" secondItem="fx3-DL-sZj" secondAttribute="leading" constant="10" id="DLu-b5-Kve"/>
@@ -274,6 +274,7 @@
                                 <connections>
                                     <outlet property="likeControl" destination="Yuv-BA-5os" id="I2n-f5-cym"/>
                                     <outlet property="photoImageView" destination="BRx-28-KrY" id="5JS-RX-8Fa"/>
+                                    <segue destination="68r-j6-tqD" kind="show" identifier="fullScreenSegue" id="46c-Y9-j7B"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -286,6 +287,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e3T-FM-xRC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5313.04347826087" y="-119.19642857142857"/>
+        </scene>
+        <!--Full Screen Photo Controller-->
+        <scene sceneID="js7-XM-USH">
+            <objects>
+                <viewController id="68r-j6-tqD" customClass="FullScreenPhotoController" customModule="GB_Vkontakte" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9OG-LA-jVn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uN0-Wo-g5s">
+                                <rect key="frame" x="0.0" y="188" width="414" height="481"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uN0-Wo-g5s" firstAttribute="leading" secondItem="XqF-an-0cc" secondAttribute="leading" id="0Kg-I2-LKY"/>
+                            <constraint firstItem="XqF-an-0cc" firstAttribute="bottom" secondItem="uN0-Wo-g5s" secondAttribute="bottom" constant="100" id="CAS-GH-Mtt"/>
+                            <constraint firstItem="uN0-Wo-g5s" firstAttribute="top" secondItem="XqF-an-0cc" secondAttribute="top" constant="100" id="e0M-cI-IL5"/>
+                            <constraint firstItem="uN0-Wo-g5s" firstAttribute="trailing" secondItem="XqF-an-0cc" secondAttribute="trailing" id="qgE-g7-iVJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XqF-an-0cc"/>
+                    </view>
+                    <connections>
+                        <outlet property="largePhoto" destination="uN0-Wo-g5s" id="WDZ-mZ-s79"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fx2-OC-1ON" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6334.7826086956529" y="-123.21428571428571"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ODj-OF-4qZ">
