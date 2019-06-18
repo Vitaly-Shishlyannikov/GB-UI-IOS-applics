@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		583A96C622AE8D5100D7CC7F /* ThreePointsIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583A96C522AE8D5100D7CC7F /* ThreePointsIndicator.swift */; };
-		583A96C822AEFD0700D7CC7F /* CustomDelaySegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583A96C722AEFD0700D7CC7F /* CustomDelaySegue.swift */; };
 		5841A7E622B7D41A009C22DD /* FullScreeenPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5841A7E522B7D41A009C22DD /* FullScreeenPhotoController.swift */; };
 		5841A7E822B82248009C22DD /* PhotosServerEmulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5841A7E722B82248009C22DD /* PhotosServerEmulator.swift */; };
 		5848118E22A8FFBE00DD653C /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848118D22A8FFBE00DD653C /* NewsViewController.swift */; };
@@ -43,7 +42,6 @@
 
 /* Begin PBXFileReference section */
 		583A96C522AE8D5100D7CC7F /* ThreePointsIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreePointsIndicator.swift; sourceTree = "<group>"; };
-		583A96C722AEFD0700D7CC7F /* CustomDelaySegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDelaySegue.swift; sourceTree = "<group>"; };
 		5841A7E522B7D41A009C22DD /* FullScreeenPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreeenPhotoController.swift; sourceTree = "<group>"; };
 		5841A7E722B82248009C22DD /* PhotosServerEmulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosServerEmulator.swift; sourceTree = "<group>"; };
 		5848118D22A8FFBE00DD653C /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				58FAC717229D568C00DE1667 /* ExtensionsForClasses.swift */,
-				583A96C722AEFD0700D7CC7F /* CustomDelaySegue.swift */,
 				58E75F19228EEBA400EC0B9C /* AppDelegate.swift */,
 				58E75F2B228EEBDD00EC0B9C /* LaunchController.swift */,
 				58FAC715229D53DD00DE1667 /* HeartButton.swift */,
@@ -268,7 +265,6 @@
 				58FAC716229D53DD00DE1667 /* HeartButton.swift in Sources */,
 				58A5DDE8229B3801001381C4 /* AllGroupsViewController.swift in Sources */,
 				5841A7E622B7D41A009C22DD /* FullScreeenPhotoController.swift in Sources */,
-				583A96C822AEFD0700D7CC7F /* CustomDelaySegue.swift in Sources */,
 				5848119B22A940F700DD653C /* ViewsControl.swift in Sources */,
 				58FAC710229C934D00DE1667 /* RoundShadowView.swift in Sources */,
 				588F829A22A14EA300DA7643 /* FriendsServerEmulator.swift in Sources */,
