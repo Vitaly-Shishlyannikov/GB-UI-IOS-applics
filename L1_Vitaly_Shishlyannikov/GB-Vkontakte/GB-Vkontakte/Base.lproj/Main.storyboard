@@ -296,7 +296,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uN0-Wo-g5s">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a11-Zg-u2A" userLabel="next Photo">
+                                <rect key="frame" x="0.0" y="188" width="414" height="481"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uN0-Wo-g5s" userLabel="main Photo">
                                 <rect key="frame" x="0.0" y="188" width="414" height="481"/>
                             </imageView>
                         </subviews>
@@ -304,13 +307,18 @@
                         <constraints>
                             <constraint firstItem="uN0-Wo-g5s" firstAttribute="leading" secondItem="XqF-an-0cc" secondAttribute="leading" id="0Kg-I2-LKY"/>
                             <constraint firstItem="XqF-an-0cc" firstAttribute="bottom" secondItem="uN0-Wo-g5s" secondAttribute="bottom" constant="100" id="CAS-GH-Mtt"/>
+                            <constraint firstItem="a11-Zg-u2A" firstAttribute="leading" secondItem="XqF-an-0cc" secondAttribute="leading" id="TIA-8I-rIS"/>
+                            <constraint firstItem="XqF-an-0cc" firstAttribute="bottom" secondItem="a11-Zg-u2A" secondAttribute="bottom" constant="100" id="Uti-3y-PeK"/>
                             <constraint firstItem="uN0-Wo-g5s" firstAttribute="top" secondItem="XqF-an-0cc" secondAttribute="top" constant="100" id="e0M-cI-IL5"/>
+                            <constraint firstItem="a11-Zg-u2A" firstAttribute="top" secondItem="XqF-an-0cc" secondAttribute="top" constant="100" id="ol8-WA-Kf4"/>
                             <constraint firstItem="uN0-Wo-g5s" firstAttribute="trailing" secondItem="XqF-an-0cc" secondAttribute="trailing" id="qgE-g7-iVJ"/>
+                            <constraint firstItem="a11-Zg-u2A" firstAttribute="trailing" secondItem="XqF-an-0cc" secondAttribute="trailing" id="yge-3P-CxT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XqF-an-0cc"/>
                     </view>
                     <connections>
-                        <outlet property="largePhoto" destination="uN0-Wo-g5s" id="WDZ-mZ-s79"/>
+                        <outlet property="mainPhoto" destination="uN0-Wo-g5s" id="US5-Fo-I5A"/>
+                        <outlet property="nextPhoto" destination="a11-Zg-u2A" id="A4E-G2-yoC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fx2-OC-1ON" userLabel="First Responder" sceneMemberID="firstResponder"/>
