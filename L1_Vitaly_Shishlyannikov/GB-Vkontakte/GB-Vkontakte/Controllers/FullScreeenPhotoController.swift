@@ -76,7 +76,7 @@ class FullScreenPhotoController: UIViewController  {
         
         let animationMoveLeft = CABasicAnimation(keyPath: "position.x")
         animationMoveLeft.fromValue = 500
-        animationMoveLeft.toValue = UIScreen.main.bounds.width / 2
+        animationMoveLeft.toValue = self.view.frame.size.width / 2
         animationMoveLeft.duration = 1
         animationMoveLeft.beginTime = CACurrentMediaTime()
         
@@ -117,13 +117,13 @@ class FullScreenPhotoController: UIViewController  {
         self.nextPhoto.layer.add(animationScale, forKey: nil)
         self.nextPhoto.layer.add(animationOpacity, forKey: nil)
         
-        let animationMoveLeft = CABasicAnimation(keyPath: "position.x")
-        animationMoveLeft.fromValue = -500
-        animationMoveLeft.toValue = UIScreen.main.bounds.width / 2
-        animationMoveLeft.duration = 1
-        animationMoveLeft.beginTime = CACurrentMediaTime()
+        let animationMoveRight = CABasicAnimation(keyPath: "position.x")
+        animationMoveRight.fromValue = -500
+        animationMoveRight.toValue = self.view.frame.size.width / 2
+        animationMoveRight.duration = 1
+        animationMoveRight.beginTime = CACurrentMediaTime()
         
-        self.mainPhoto.layer.add(animationMoveLeft, forKey: nil)
+        self.mainPhoto.layer.add(animationMoveRight, forKey: nil)
         
         setPhotos()
     }
