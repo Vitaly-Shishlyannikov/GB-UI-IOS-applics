@@ -480,9 +480,16 @@
                             <outlet property="delegate" destination="q9a-Zu-aKR" id="E0R-EU-rSE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="News" id="e3I-ws-Om8"/>
+                    <navigationItem key="navigationItem" title="News" id="e3I-ws-Om8">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="Yje-I5-vTg">
+                            <connections>
+                                <segue destination="imb-0n-Xcj" kind="unwind" unwindAction="myUNwindActionWithUnwindSegue:" id="ucg-EH-QqO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="loS-n5-MtV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="imb-0n-Xcj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4295" y="1615"/>
         </scene>
