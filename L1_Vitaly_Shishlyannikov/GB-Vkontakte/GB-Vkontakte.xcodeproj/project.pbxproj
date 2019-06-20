@@ -10,6 +10,8 @@
 		583A96C622AE8D5100D7CC7F /* ThreePointsIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583A96C522AE8D5100D7CC7F /* ThreePointsIndicator.swift */; };
 		5841A7E622B7D41A009C22DD /* FullScreeenPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5841A7E522B7D41A009C22DD /* FullScreeenPhotoController.swift */; };
 		5841A7E822B82248009C22DD /* PhotosServerEmulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5841A7E722B82248009C22DD /* PhotosServerEmulator.swift */; };
+		5841A7EA22BB6C2E009C22DD /* CustomPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5841A7E922BB6C2E009C22DD /* CustomPushAnimator.swift */; };
+		5841A7EC22BB71CC009C22DD /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5841A7EB22BB71CC009C22DD /* CustomNavigationController.swift */; };
 		5848118E22A8FFBE00DD653C /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848118D22A8FFBE00DD653C /* NewsViewController.swift */; };
 		5848119122A903E500DD653C /* CommentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848119022A903E500DD653C /* CommentControl.swift */; };
 		5848119322A9098100DD653C /* NewsServerEmulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848119222A9098100DD653C /* NewsServerEmulator.swift */; };
@@ -44,6 +46,8 @@
 		583A96C522AE8D5100D7CC7F /* ThreePointsIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreePointsIndicator.swift; sourceTree = "<group>"; };
 		5841A7E522B7D41A009C22DD /* FullScreeenPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreeenPhotoController.swift; sourceTree = "<group>"; };
 		5841A7E722B82248009C22DD /* PhotosServerEmulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosServerEmulator.swift; sourceTree = "<group>"; };
+		5841A7E922BB6C2E009C22DD /* CustomPushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPushAnimator.swift; sourceTree = "<group>"; };
+		5841A7EB22BB71CC009C22DD /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		5848118D22A8FFBE00DD653C /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		5848119022A903E500DD653C /* CommentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentControl.swift; sourceTree = "<group>"; };
 		5848119222A9098100DD653C /* NewsServerEmulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsServerEmulator.swift; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				58FAC717229D568C00DE1667 /* ExtensionsForClasses.swift */,
+				5841A7EB22BB71CC009C22DD /* CustomNavigationController.swift */,
+				5841A7E922BB6C2E009C22DD /* CustomPushAnimator.swift */,
 				58E75F19228EEBA400EC0B9C /* AppDelegate.swift */,
 				58E75F2B228EEBDD00EC0B9C /* LaunchController.swift */,
 				58FAC715229D53DD00DE1667 /* HeartButton.swift */,
@@ -259,8 +265,10 @@
 				5848118E22A8FFBE00DD653C /* NewsViewController.swift in Sources */,
 				5848119722A919AB00DD653C /* NewsCell.swift in Sources */,
 				58FAC714229D533800DE1667 /* LikeControl.swift in Sources */,
+				5841A7EA22BB6C2E009C22DD /* CustomPushAnimator.swift in Sources */,
 				58A5DDED229B3B69001381C4 /* MyGroupsViewController.swift in Sources */,
 				5848119122A903E500DD653C /* CommentControl.swift in Sources */,
+				5841A7EC22BB71CC009C22DD /* CustomNavigationController.swift in Sources */,
 				58A5DDFA229C05AB001381C4 /* GradientView.swift in Sources */,
 				58FAC716229D53DD00DE1667 /* HeartButton.swift in Sources */,
 				58A5DDE8229B3801001381C4 /* AllGroupsViewController.swift in Sources */,

@@ -74,6 +74,7 @@ class LaunchController: UIViewController {
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyBoard))
         //добавляем его scrollView
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
+        // загругление краев кнопки входа
         self.loginButton.layer.cornerRadius = 5
         animateTitleVK()
         animateEnterButton()

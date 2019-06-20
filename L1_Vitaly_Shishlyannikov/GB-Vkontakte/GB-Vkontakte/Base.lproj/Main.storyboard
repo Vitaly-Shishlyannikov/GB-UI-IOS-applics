@@ -348,7 +348,7 @@
         <!--Friends-->
         <scene sceneID="Dmi-yb-ckC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3cv-Mj-MeO" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3cv-Mj-MeO" customClass="CustomNavigationController" customModule="GB_Vkontakte" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Friends" id="tBs-rL-wU5">
                         <color key="badgeColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
