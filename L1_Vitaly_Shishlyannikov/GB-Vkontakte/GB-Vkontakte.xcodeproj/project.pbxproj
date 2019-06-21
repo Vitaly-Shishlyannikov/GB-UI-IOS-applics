@@ -174,8 +174,8 @@
 		5836E76222BC3956007AA848 /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
-				5841A7ED22BBC945009C22DD /* CustomPopAnimator.swift */,
 				5841A7E922BB6C2E009C22DD /* CustomPushAnimator.swift */,
+				5841A7ED22BBC945009C22DD /* CustomPopAnimator.swift */,
 				5836E75A22BC3015007AA848 /* CustomInteractiveTransition.swift */,
 			);
 			path = Transitions;
