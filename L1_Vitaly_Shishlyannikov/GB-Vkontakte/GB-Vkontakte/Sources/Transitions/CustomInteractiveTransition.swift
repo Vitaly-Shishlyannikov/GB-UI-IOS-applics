@@ -33,7 +33,7 @@ class CustomInteractiveTransition: UIPercentDrivenInteractiveTransition {
                 let translation = recognizer.translation(in: recognizer.view)
                 
                 // для переворота не хватает значения x, добавим множитель 10
-                let relativeTranslation = 10 * translation.x / (recognizer.view?.bounds.width ?? 1)
+                let relativeTranslation = 30 * translation.x / (recognizer.view?.bounds.width ?? 1)
                 let progress = max(0, min(1, relativeTranslation))
                 self.shouldFinish = progress > 0.33
                 self.update(progress)
