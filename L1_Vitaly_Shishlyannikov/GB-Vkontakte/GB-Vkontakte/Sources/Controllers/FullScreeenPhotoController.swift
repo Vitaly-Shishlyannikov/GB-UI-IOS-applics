@@ -20,40 +20,42 @@ class FullScreenPhotoController: UIViewController  {
     
     override func viewDidLoad() {
         getPhotos()
-        setPhotos()
-        mainPhoto.addGestureRecognizer(swipeLeftGestureRecognizer)
-        mainPhoto.addGestureRecognizer(swipeRightGestureRecognizer)
+        setMainPhoto()
+        setupView()
     }
     
     func getPhotos () {
         photos = PhotosServerEmulator.getPhotos() ?? []
     }
     
-    func setPhotos () {
-        if indexPathSelected.row >= 0,
-            indexPathSelected.row < photos.count - 1 {
-        let currentPhotoIndex = photos[indexPathSelected.row]
-        let photoPath = currentPhotoIndex.photoPath
-        mainPhoto.image = UIImage(named: photoPath)
-        
-        let nextPhotoIndex = photos[indexPathSelected.row + 1]
-        let nextPhotoPath = nextPhotoIndex.photoPath
-        nextPhoto.image = UIImage(named: nextPhotoPath)
-        }
+    func setMainPhoto () {
+        let currentPhotoImage = UIImage(named: photos[indexPathSelected.row].photoPath)
+        mainPhoto.image = currentPhotoImage
     }
     
-    lazy var swipeLeftGestureRecognizer: UISwipeGestureRecognizer = {
-        let recognizerLeft = UISwipeGestureRecognizer(target: self,
-                                                action: #selector(onSwipeLeft(_:)))
-        recognizerLeft.direction = .left
-        return recognizerLeft
-    }()
+    func setupView() {
+        
+        let swipeLeftGestureRecognizer = UISwipeGestureRecognizer(target: self,
+                                                          action: #selector(swipeLeft(_:)))
+            swipeLeftGestureRecognizer.direction = .left
+        
+        let swipeRightGestureRecognizer = UISwipeGestureRecognizer(target: self,
+                                                           action: #selector(swipeRight(_:)))
+            swipeRightGestureRecognizer.direction = .right
+
+        view.addGestureRecognizer(swipeLeftGestureRecognizer)
+        view.addGestureRecognizer(swipeRightGestureRecognizer)
+    }
     
-    @objc func onSwipeLeft(_ sender: UITapGestureRecognizer) {
+    @objc func swipeLeft(_ sender: UITapGestureRecognizer) {
         if indexPathSelected.row < photos.count - 1 {
-        animatedPhotoChangeLeft()
-        indexPathSelected.row += 1
-        //setPhotos()
+            
+            let nextPhotoImage = UIImage(named: photos[indexPathSelected.row + 1].photoPath)
+            nextPhoto.image = nextPhotoImage
+            
+            animatedPhotoChangeLeft()
+            
+            indexPathSelected.row += 1
         }
     }
     
@@ -82,21 +84,18 @@ class FullScreenPhotoController: UIViewController  {
         
         self.nextPhoto.layer.add(animationMoveLeft, forKey: nil)
         
-        setPhotos()
+        setMainPhoto()
     }
     
-    lazy var swipeRightGestureRecognizer: UISwipeGestureRecognizer = {
-        let recognizerRight = UISwipeGestureRecognizer(target: self,
-                                                       action: #selector(onSwipeRight(_:)))
-        recognizerRight.direction = .right
-        return recognizerRight
-    }()
-    
-    @objc func onSwipeRight(_ sender: UITapGestureRecognizer) {
-        if indexPathSelected.row >= 0 {
-            animatedPhotoChangeRight()
+    @objc func swipeRight(_ sender: UITapGestureRecognizer) {
+        if indexPathSelected.row > 0 {
+            
+            let nextPhotoImage = UIImage(named: photos[indexPathSelected.row].photoPath)
+            nextPhoto.image = nextPhotoImage
+            
             indexPathSelected.row -= 1
-            //setPhotos()
+            
+            animatedPhotoChangeRight()
         }
     }
     
@@ -125,6 +124,6 @@ class FullScreenPhotoController: UIViewController  {
         
         self.mainPhoto.layer.add(animationMoveRight, forKey: nil)
         
-        setPhotos()
+        setMainPhoto()
     }
 }
