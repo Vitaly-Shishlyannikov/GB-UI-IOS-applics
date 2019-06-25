@@ -330,7 +330,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GB-Vkontakte/Sources/Controllers/FullScreeenPhotoController.swift"
-            timestampString = "583159483.751876"
+            timestampString = "583160531.2673891"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "95"
@@ -346,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GB-Vkontakte/Sources/Controllers/FullScreeenPhotoController.swift"
-            timestampString = "583159483.7532851"
+            timestampString = "583160531.267836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "swipeRight(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -362,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GB-Vkontakte/Sources/Controllers/FullScreeenPhotoController.swift"
-            timestampString = "583159483.753726"
+            timestampString = "583160531.267939"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "FullScreenPhotoController"
             landmarkType = "3">
          </BreakpointContent>
@@ -378,7 +378,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GB-Vkontakte/Sources/Controllers/FullScreeenPhotoController.swift"
-            timestampString = "583159483.754135"
+            timestampString = "583160531.268031"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "animatedPhotoChangeRight()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GB-Vkontakte/Sources/Controllers/FullScreeenPhotoController.swift"
+            timestampString = "583160531.2681201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "105"
@@ -394,55 +410,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GB-Vkontakte/Sources/Controllers/FullScreeenPhotoController.swift"
-            timestampString = "583159483.754546"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "animatedPhotoChangeRight()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GB-Vkontakte/Sources/Controllers/FullScreeenPhotoController.swift"
-            timestampString = "583159483.755052"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "animatedPhotoChangeRight()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GB-Vkontakte/Sources/Controllers/FullScreeenPhotoController.swift"
-            timestampString = "583159483.755946"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "animatedPhotoChangeRight()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GB-Vkontakte/Sources/Controllers/FullScreeenPhotoController.swift"
-            timestampString = "583159483.75651"
+            timestampString = "583160531.268212"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "108"
@@ -458,11 +426,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GB-Vkontakte/Sources/Controllers/FullScreeenPhotoController.swift"
-            timestampString = "583159483.756933"
+            timestampString = "583160531.268303"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "animatedPhotoChangeRight()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GB-Vkontakte/Sources/Controllers/FullScreeenPhotoController.swift"
+            timestampString = "583160531.2683949"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "animatedPhotoChangeRight()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GB-Vkontakte/Sources/Controllers/FullScreeenPhotoController.swift"
+            timestampString = "583160531.268484"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "animatedPhotoChangeRight()"
             landmarkType = "7">
          </BreakpointContent>

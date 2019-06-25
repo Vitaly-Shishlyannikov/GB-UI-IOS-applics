@@ -8,38 +8,12 @@
 
 import UIKit
 
-class MyFriendsViewController: UITableViewController, UISearchResultsUpdating {
+class MyFriendsViewController: UITableViewController {
     
     var friends: [FriendModel] = []
     var friendsIndex: [Character] = []
     var friendsIndexDictionary: [Character: [FriendModel]] = [:]
     var filteredFriends = [FriendModel]()
-    
-    let searchController = UISearchController(searchResultsController: nil)
-    
-    // MARK: SearchBar
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
-    }
-   
-    func searchBarIsEmpty() -> Bool {
-        // Returns true if the text is empty or nil
-        return searchController.searchBar.text?.isEmpty ?? true
-    }
-    
-    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-        filteredFriends = friends.filter({( friend : FriendModel) -> Bool in
-            return friend.name.lowercased().contains(searchText.lowercased())
-        })
-        
-        tableView.reloadData()
-    }
-    
-    func isFiltering() -> Bool {
-        return searchController.isActive && !searchBarIsEmpty()
-    }
-    
     
     func getFriends () {
         friends = FriendsServerEmulator.getFriends() ?? []
@@ -61,13 +35,6 @@ class MyFriendsViewController: UITableViewController, UISearchResultsUpdating {
         getFriendsIndexArray()
         getFriendsIndexDictionary()
         self.tableView.rowHeight = 70
-        //self.tableView.backgroundColor = UIColor.blue
-        
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Friends"
-        navigationItem.searchController = searchController
-        definesPresentationContext = true
     }
     
     // MARK: - Table view data source
@@ -78,10 +45,6 @@ class MyFriendsViewController: UITableViewController, UISearchResultsUpdating {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isFiltering() {
-            return filteredFriends.count
-        }
-        
         // для каждой буквы в массиве индексов проверяем соответствие первой букве фамилии
         // всех друзей, добавляем при совпадении и возвращаем кол-во элементов для секции
         let char = friendsIndex[section]
@@ -90,15 +53,7 @@ class MyFriendsViewController: UITableViewController, UISearchResultsUpdating {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if isFiltering() {
-            
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendCell.reuseIdentifier, for: indexPath) as? FriendCell else { return UITableViewCell() }
-            let avatarPath = friends[indexPath.row].avatarPath
-            cell.friendAvatar.image = UIImage(named: avatarPath)
-            cell.friendNameLabel.text = friends[indexPath.row].name
-            
-            return cell
-        }
+
         let char = friendsIndex[indexPath.section]
         let friendName = friendsIndexDictionary[char]?[indexPath.row].name
         let avatarPath = friendsIndexDictionary[char]?[indexPath.row].avatarPath
@@ -110,7 +65,7 @@ class MyFriendsViewController: UITableViewController, UISearchResultsUpdating {
         return cell
     }
     
-    // метод для быстрого перехода по первым буквам фамилий
+    // метод контрола для быстрого перехода по первым буквам фамилий
     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         // преобразуем массив [Chararacter] в [String]
         let friendsIndexString = friendsIndex.map {String($0)}
