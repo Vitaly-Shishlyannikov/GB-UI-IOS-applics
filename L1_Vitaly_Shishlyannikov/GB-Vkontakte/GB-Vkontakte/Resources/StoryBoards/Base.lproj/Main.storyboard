@@ -134,8 +134,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zCX-Tf-dwf" userLabel="Friends Table View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.046087909500577839" green="0.55135237434347939" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.67528440860000005" green="0.84366794199999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendCell" id="1lV-y2-lvd" customClass="FriendCell" customModule="GB_Vkontakte" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="60"/>
@@ -153,7 +152,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11f-FT-y2S" userLabel="ShadowView" customClass="RoundShadowVIew" customModule="GB_Vkontakte" customModuleProvider="target">
                                             <rect key="frame" x="10" y="8" width="44" height="44"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iUw-21-OKd" userLabel="avatarView" customClass="RoundAvatarView" customModule="GB_Vkontakte" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iUw-21-OKd" userLabel="avatarView" customClass="RoundAvatarView" customModule="GB_Vkontakte" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                                     <gestureRecognizers/>
                                                 </imageView>
@@ -349,13 +348,14 @@
         <scene sceneID="Dmi-yb-ckC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3cv-Mj-MeO" customClass="CustomNavigationController" customModule="GB_Vkontakte" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Friends" id="tBs-rL-wU5">
+                    <tabBarItem key="tabBarItem" title="Friends" image="friendsImage-1" id="tBs-rL-wU5">
                         <color key="badgeColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kQI-Vw-YfK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.67528440859452565" green="0.84366794196458339" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -374,6 +374,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.046087909500000003" green="0.55135237429999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupCell" id="f80-bK-kBw" userLabel="GroupCell" customClass="GroupCell" customModule="GB_Vkontakte" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
@@ -497,10 +498,11 @@
         <scene sceneID="CHf-dV-ndZ">
             <objects>
                 <navigationController id="GpR-nz-9Fp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="News" id="dGo-8c-emr"/>
+                    <tabBarItem key="tabBarItem" title="News" image="newsImage" id="dGo-8c-emr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QT4-b7-gme">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.67528440860000005" green="0.84366794199999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="q9a-Zu-aKR" kind="relationship" relationship="rootViewController" id="m09-SE-Q85"/>
@@ -604,14 +606,15 @@
         <!--Groups-->
         <scene sceneID="nlt-yF-32D">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IaO-mI-w7l" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Groups" id="xdK-bU-oie">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IaO-mI-w7l" customClass="CustomNavigationController" customModule="GB_Vkontakte" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Groups" image="groups" id="xdK-bU-oie">
                         <color key="badgeColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CBa-wr-EJc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.67528440860000005" green="0.84366794199999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -624,6 +627,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="friendsImage-1" width="32" height="32"/>
+        <image name="groups" width="32" height="32"/>
         <image name="images-37" width="224" height="225"/>
+        <image name="newsImage" width="32" height="32"/>
     </resources>
 </document>

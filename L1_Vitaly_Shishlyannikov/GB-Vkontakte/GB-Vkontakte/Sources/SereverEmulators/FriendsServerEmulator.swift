@@ -15,16 +15,16 @@ class FriendsServerEmulator {
         FriendModel(name: "Петрова Елена", avatarPath: "elenapetrova"),
         FriendModel(name: "Дябина Наталья", avatarPath: "natadyabina"),
         FriendModel(name: "Пугачева Алла", avatarPath: "allapugacheva"),
-        FriendModel(name: "Поляков Роман", avatarPath: "defaultAvatar"),
-        FriendModel(name: "Питт Бред", avatarPath: "defaultAvatar"),
-        FriendModel(name: "Щукин Карась", avatarPath: "defaultAvatar"),
+        FriendModel(name: "Поляков Роман", avatarPath: "polyakovroman"),
+        FriendModel(name: "Питт Бред", avatarPath: "bredpitt"),
+        FriendModel(name: "Щукин Карась", avatarPath: "karas"),
         FriendModel(name: "Семенов Панкрат", avatarPath: "defaultAvatar"),
-        FriendModel(name: "Иствуд Клинт", avatarPath: "defaultAvatar"),
+        FriendModel(name: "Иствуд Клинт", avatarPath: "clinteastwood"),
         FriendModel(name: "Завьялов Семен", avatarPath: "semenzavyalov"),
         FriendModel(name: "Сузуки Ямакаси", avatarPath: "defaultAvatar"),
-        FriendModel(name: "Мамин Сибиряк", avatarPath: "defaultAvatar"),
-        FriendModel(name: "Красоткина Прическа", avatarPath: "defaultAvatar"),
-        FriendModel(name: "Кроссовкин Дешеслав", avatarPath: "defaultAvatar"),
+        FriendModel(name: "Мамин Сибиряк", avatarPath: "mamin"),
+        FriendModel(name: "Красоткина Прическа", avatarPath: "pricheska"),
+        FriendModel(name: "Кроссовкин Дешеслав", avatarPath: "krossovki"),
         ]
     
     static func getFriends() -> [FriendModel]?{

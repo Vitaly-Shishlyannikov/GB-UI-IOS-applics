@@ -86,7 +86,7 @@ class MyFriendsViewController: UITableViewController {
     // header секции и настройка его цвета
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
         if let header: UITableViewHeaderFooterView = view as? UITableViewHeaderFooterView {
-            header.backgroundView?.alpha = 0.9
+            header.backgroundView?.alpha = 0.5
             header.backgroundView?.backgroundColor = UIColor.white
         }
     }
