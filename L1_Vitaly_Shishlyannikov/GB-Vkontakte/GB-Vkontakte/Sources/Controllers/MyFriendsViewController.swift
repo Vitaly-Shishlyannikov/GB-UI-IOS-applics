@@ -13,7 +13,21 @@ class MyFriendsViewController: UITableViewController {
     var friends: [FriendModel] = []
     var friendsIndex: [Character] = []
     var friendsIndexDictionary: [Character: [FriendModel]] = [:]
-    var filteredFriends = [FriendModel]()
+    var searchedFriends: [FriendModel] = []
+    
+    // MARK: - LifeCycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        getFriends()
+        getFriendsIndexArray()
+        getFriendsIndexDictionary()
+        self.tableView.rowHeight = 70
+        
+        searchedFriends = friends
+    }
+    
+    // MARK: - Get data
     
     func getFriends () {
         friends = FriendsServerEmulator.getFriends() ?? []
@@ -27,15 +41,7 @@ class MyFriendsViewController: UITableViewController {
         friendsIndexDictionary = FriendsServerEmulator.getFriendIndexDictionary()
     }
     
-    // MARK: LifeCycle
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        getFriends()
-        getFriendsIndexArray()
-        getFriendsIndexDictionary()
-        self.tableView.rowHeight = 70
-    }
     
     // MARK: - Table view data source
     
@@ -100,9 +106,19 @@ class MyFriendsViewController: UITableViewController {
         if segue.identifier == "PhotoSegue",
             let photoController = segue.destination as? PhotoCollectionViewController,
             let indexPath = tableView.indexPathForSelectedRow {
-
-                let photoName = friends[indexPath.row].name
-                photoController.friendNameForTitle = photoName
+            let selectedFriendCharacter = friendsIndex[indexPath.section]
+            print(indexPath)
+            print(friendsIndexDictionary)
+            let photoName = friendsIndexDictionary[selectedFriendCharacter]?[indexPath.row].name
+            photoController.friendNameForTitle = photoName ?? ""
             }
     }
 }
+
+//extension MyFriendsViewController: UITableViewDelegate, UITableViewDataSource {
+//    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//
+//    }
+//}
+
